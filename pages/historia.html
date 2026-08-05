@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Conoce la historia y el legado de la civilización Tihuanacu."
+  >
+
+  <title>Tihuanacu | Historia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="../js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="font-sans text-piedra-900 antialiased">
+
+  <header class="bg-piedra-900 text-white">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+    >
+      <a href="../index.html" class="font-display text-xl font-bold">
+        Tihuanacu
+      </a>
+
+      <div class="hidden items-center gap-7 lg:flex">
+        <a href="../index.html" class="hover:text-tierra-300">
+          Inicio
+        </a>
+
+        <a href="historia.html" class="font-semibold text-tierra-300">
+          Historia
+        </a>
+
+        <a href="atractivos.html" class="hover:text-tierra-300">
+          Atractivos
+        </a>
+
+        <a href="visita.html" class="hover:text-tierra-300">
+          Visita
+        </a>
+
+        <a href="galeria.html" class="hover:text-tierra-300">
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5 font-semibold"
+        >
+          Contacto
+        </a>
+      </div>
+
+      <button
+        id="menu-button"
+        type="button"
+        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 lg:hidden"
+        aria-expanded="false"
+      >
+        <svg
+          id="menu-open-icon"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <svg
+          id="menu-close-icon"
+          class="hidden h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-width="2"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-white/10 px-4 py-5 lg:hidden"
+    >
+      <div class="flex flex-col gap-2">
+        <a href="../index.html" class="mobile-link px-4 py-3">
+          Inicio
+        </a>
+
+        <a href="historia.html" class="mobile-link px-4 py-3">
+          Historia
+        </a>
+
+        <a href="atractivos.html" class="mobile-link px-4 py-3">
+          Atractivos
+        </a>
+
+        <a href="visita.html" class="mobile-link px-4 py-3">
+          Visita
+        </a>
+
+        <a href="galeria.html" class="mobile-link px-4 py-3">
+          Galería
+        </a>
+
+        <a href="contacto.html" class="mobile-link px-4 py-3">
+          Contacto
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-[500px] overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1531276262976-7afc1c8f5a3c?auto=format&fit=crop&w=1800&q=85"
+        alt="Paisaje andino"
+        class="absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="page-overlay absolute inset-0"></div>
+
+      <div
+        class="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-4 py-24 text-white sm:px-6 lg:px-8"
+      >
+        <div class="max-w-3xl">
+          <p
+            class="font-bold uppercase tracking-[0.25em] text-tierra-300"
+          >
+            Legado ancestral
+          </p>
+
+          <h1 class="mt-4 font-display text-5xl font-bold sm:text-6xl">
+            Historia de Tihuanacu
+          </h1>
+
+          <p class="mt-6 text-lg leading-8 text-piedra-100">
+            Una civilización que desarrolló arquitectura, agricultura y una
+            profunda identidad cultural en los Andes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="space-y-12">
+          <article class="border-l-4 border-tierra-600 pl-8">
+            <p class="font-bold uppercase tracking-wider text-tierra-700">
+              Primera etapa
+            </p>
+
+            <h2 class="mt-3 font-display text-3xl font-bold">
+              Formación de la comunidad
+            </h2>
+
+            <p class="mt-4 leading-8 text-piedra-600">
+              Los primeros asentamientos aprovecharon los recursos del
+              altiplano y desarrollaron técnicas agrícolas adaptadas a las
+              condiciones climáticas de la región.
+            </p>
+          </article>
+
+          <article class="border-l-4 border-tierra-600 pl-8">
+            <p class="font-bold uppercase tracking-wider text-tierra-700">
+              Desarrollo
+            </p>
+
+            <h2 class="mt-3 font-display text-3xl font-bold">
+              Crecimiento político y cultural
+            </h2>
+
+            <p class="mt-4 leading-8 text-piedra-600">
+              Tihuanacu se convirtió en un importante centro ceremonial,
+              político y económico con influencia en distintas regiones
+              andinas.
+            </p>
+          </article>
+
+          <article class="border-l-4 border-tierra-600 pl-8">
+            <p class="font-bold uppercase tracking-wider text-tierra-700">
+              Arquitectura
+            </p>
+
+            <h2 class="mt-3 font-display text-3xl font-bold">
+              Construcciones monumentales
+            </h2>
+
+            <p class="mt-4 leading-8 text-piedra-600">
+              Sus habitantes trabajaron grandes bloques de piedra y crearon
+              templos, plataformas, monolitos y espacios ceremoniales.
+            </p>
+          </article>
+
+          <article class="border-l-4 border-tierra-600 pl-8">
+            <p class="font-bold uppercase tracking-wider text-tierra-700">
+              Actualidad
+            </p>
+
+            <h2 class="mt-3 font-display text-3xl font-bold">
+              Patrimonio cultural
+            </h2>
+
+            <p class="mt-4 leading-8 text-piedra-600">
+              En la actualidad, Tihuanacu sigue siendo un símbolo fundamental
+              de la memoria, identidad y espiritualidad de los pueblos andinos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-piedra-900 py-8 text-center text-white">
+    © <span class="current-year"></span> Turismo Tihuanacu.
+  </footer>
+
+  <button
+    id="scroll-top-button"
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-tierra-700 text-white"
+  >
+    ↑
+  </button>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

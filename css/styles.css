@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffaf5;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32, 24, 18, 0.92) 0%,
+      rgba(32, 24, 18, 0.68) 48%,
+      rgba(32, 24, 18, 0.28) 100%
+    );
+}
+
+.page-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32, 24, 18, 0.9),
+      rgba(32, 24, 18, 0.45)
+    );
+}
+
+.pattern-bg {
+  background-image:
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(150, 59, 29, 0.15) 1px,
+      transparent 0
+    );
+  background-size: 24px 24px;
+}
+
+.gallery-image {
+  transition: transform 500ms ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.06);
+}
+

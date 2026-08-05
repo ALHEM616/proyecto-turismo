@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Tihuanacu | Atractivos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="../js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="font-sans text-piedra-900">
+
+  <header class="bg-piedra-900 text-white">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+    >
+      <a href="../index.html" class="font-display text-xl font-bold">
+        Tihuanacu
+      </a>
+
+      <div class="hidden gap-7 lg:flex">
+        <a href="../index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="atractivos.html" class="text-tierra-300">Atractivos</a>
+        <a href="visita.html">Visita</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <button
+        id="menu-button"
+        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        aria-expanded="false"
+      >
+        <span id="menu-open-icon">☰</span>
+        <span id="menu-close-icon" class="hidden">✕</span>
+      </button>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-white/10 px-4 py-5 lg:hidden"
+    >
+      <div class="flex flex-col gap-4">
+        <a class="mobile-link" href="../index.html">Inicio</a>
+        <a class="mobile-link" href="historia.html">Historia</a>
+        <a class="mobile-link" href="atractivos.html">Atractivos</a>
+        <a class="mobile-link" href="visita.html">Visita</a>
+        <a class="mobile-link" href="galeria.html">Galería</a>
+        <a class="mobile-link" href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-tierra-700 py-24 text-center text-white">
+      <div class="mx-auto max-w-4xl px-4">
+        <p class="font-bold uppercase tracking-[0.25em] text-tierra-200">
+          Explora
+        </p>
+
+        <h1 class="mt-4 font-display text-5xl font-bold">
+          Atractivos arqueológicos
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-tierra-100">
+          Conoce los principales monumentos y espacios ceremoniales de
+          Tihuanacu.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div
+        class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8"
+      >
+        <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=85"
+            alt="Puerta del Sol"
+            class="h-64 w-full object-cover"
+          >
+
+          <div class="p-7">
+            <h2 class="font-display text-2xl font-bold">
+              Puerta del Sol
+            </h2>
+
+            <p class="mt-3 leading-7 text-piedra-600">
+              Monumento tallado en piedra reconocido por sus relieves y
+              símbolos.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?auto=format&fit=crop&w=900&q=85"
+            alt="Kalasasaya"
+            class="h-64 w-full object-cover"
+          >
+
+          <div class="p-7">
+            <h2 class="font-display text-2xl font-bold">
+              Kalasasaya
+            </h2>
+
+            <p class="mt-3 leading-7 text-piedra-600">
+              Espacio ceremonial rodeado por pilares y muros de piedra.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
+            alt="Akapana"
+            class="h-64 w-full object-cover"
+          >
+
+          <div class="p-7">
+            <h2 class="font-display text-2xl font-bold">
+              Pirámide de Akapana
+            </h2>
+
+            <p class="mt-3 leading-7 text-piedra-600">
+              Plataforma monumental que evidencia la planificación urbana del
+              sitio.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=900&q=85"
+            alt="Templete semisubterráneo"
+            class="h-64 w-full object-cover"
+          >
+
+          <div class="p-7">
+            <h2 class="font-display text-2xl font-bold">
+              Templete semisubterráneo
+            </h2>
+
+            <p class="mt-3 leading-7 text-piedra-600">
+              Espacio ceremonial conocido por las cabezas talladas en sus
+              muros.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=85"
+            alt="Monolitos"
+            class="h-64 w-full object-cover"
+          >
+
+          <div class="p-7">
+            <h2 class="font-display text-2xl font-bold">
+              Monolitos
+            </h2>
+
+            <p class="mt-3 leading-7 text-piedra-600">
+              Esculturas de piedra que representan personajes y símbolos
+              ceremoniales.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1531276262976-7afc1c8f5a3c?auto=format&fit=crop&w=900&q=85"
+            alt="Museo de sitio"
+            class="h-64 w-full object-cover"
+          >
+
+          <div class="p-7">
+            <h2 class="font-display text-2xl font-bold">
+              Museos de sitio
+            </h2>
+
+            <p class="mt-3 leading-7 text-piedra-600">
+              Colecciones que explican el arte, la tecnología y la vida de la
+              civilización.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-piedra-900 py-8 text-center text-white">
+    © <span class="current-year"></span> Turismo Tihuanacu.
+  </footer>
+
+  <button
+    id="scroll-top-button"
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-tierra-700 text-white"
+  >
+    ↑
+  </button>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
