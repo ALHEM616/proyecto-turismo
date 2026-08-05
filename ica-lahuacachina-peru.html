@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre la Huacachina - El Oasis de América</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-900">
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589556264800-08ae9e129a8c?q=80&w=1920&auto=format&fit=crop" 
+                 alt="Oasis de Huacachina en Ica" 
+                 class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 hover:scale-100">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/30"></div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="absolute top-0 left-0 right-0 z-20 flex justify-between items-center px-6 py-6 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                    HUACACHINA
+                </span>
+            </div>
+            <a href="#reservar" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-amber-500/25">
+                Reservar Tour
+            </a>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6 mt-16">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold text-sm mb-6 tracking-wide uppercase">
+                🌴 Ica, Perú
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Vive la magia del <br>
+                <span class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">
+                    Oasis de América
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-normal">
+                Siente la adrenalina en las dunas doradas, deslízate en sandboard y contempla atardeceres legendarios en medio del desierto peruano.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#experiencias" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-amber-500/20 text-center">
+                    Explorar Experiencias
+                </a>
+                <a href="#galeria" class="bg-slate-800/80 hover:bg-slate-800 text-white font-semibold text-lg px-8 py-4 rounded-xl border border-slate-700 backdrop-blur-sm transition-all duration-300 text-center">
+                    Ver Galería
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- METRICS / ADVANTAGES -->
+    <section class="py-12 bg-slate-950 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold text-amber-400">300+</p>
+                <p class="text-sm text-slate-400 mt-1">Días de sol al año</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold text-amber-400">4.5 hrs</p>
+                <p class="text-sm text-slate-400 mt-1">Desde Lima</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold text-amber-400">100m</p>
+                <p class="text-sm text-slate-400 mt-1">Dunas gigantes</p>
+            </div>
+            <div>
+                <p class="text-3xl md:text-4xl font-extrabold text-amber-400">#1</p>
+                <p class="text-sm text-slate-400 mt-1">Oasis de Sudamérica</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES SECTION -->
+    <section id="experiencias" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
+                Aventura y Relajación Extrema
+            </h2>
+            <p class="text-slate-400 text-lg">
+                Elige cómo quieres vivir tu viaje. Desde la máxima adrenalina en el desierto hasta noches relajantes bajo las estrellas.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/60 hover:border-amber-500/50 transition-all duration-300 group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        🏎️
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Tours en Tubulares (Buggies)</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Recorre el desierto a toda velocidad a bordo de carros areneros diseñados para dominar gigantescas montañas de arena.
+                    </p>
+                </div>
+                <span class="text-amber-400 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Conocer más &rarr;
+                </span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/60 hover:border-amber-500/50 transition-all duration-300 group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        🛹
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Sandboarding Pro</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Deslízate de pie o acostado por dunas de todos los niveles. Apto para principiantes y fanáticos de los deportes extremos.
+                    </p>
+                </div>
+                <span class="text-amber-400 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Conocer más &rarr;
+                </span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/60 hover:border-amber-500/50 transition-all duration-300 group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        🌅
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Sunset & Glamping</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Disfruta de uno de los mejores atardeceres del mundo y pasa la noche en carpas de lujo en medio del desierto silencioso.
+                    </p>
+                </div>
+                <span class="text-amber-400 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Conocer más &rarr;
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION (RESERVATION FORM) -->
+    <section id="reservar" class="py-20 bg-gradient-to-br from-amber-600 to-orange-600 text-slate-950">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">
+                ¿Listo para tu próxima aventura?
+            </h2>
+            <p class="text-lg md:text-xl font-medium mb-10 text-slate-900/90 max-w-2xl mx-auto">
+                Reserva hoy tu paquete para Huacachina y asegura tu lugar en el desierto más famoso de América.
+            </p>
+            
+            <form class="bg-slate-900/90 p-8 rounded-3xl shadow-2xl backdrop-blur-md text-left grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Fecha del Viaje</label>
+                    <input type="date" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div class="flex items-end">
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-lg">
+                        Consultar Disponibilidad
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 py-8 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <p>© 2026 Huacachina Travel. Todos los derechos reservados. Ica, Perú.</p>
+    </footer>
+
+</body>
+</html>
