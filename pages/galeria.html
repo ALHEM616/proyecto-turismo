@@ -18,45 +18,80 @@
     rel="stylesheet"
   >
 
-  <script src="../js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="font-sans text-piedra-900">
+<body class="font-sans text-piedra-900 antialiased">
 
-  <header class="bg-piedra-900 py-5 text-white">
+  <header class="sticky top-0 z-50 bg-piedra-900 text-white shadow-lg">
     <nav
-      class="mx-auto flex max-w-7xl justify-between px-4 sm:px-6 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
     >
       <a href="../index.html" class="font-display text-xl font-bold">
         Tihuanacu
       </a>
 
-      <div class="hidden gap-7 lg:flex">
+      <div class="hidden items-center gap-7 lg:flex">
         <a href="../index.html">Inicio</a>
         <a href="historia.html">Historia</a>
         <a href="atractivos.html">Atractivos</a>
         <a href="visita.html">Visita</a>
-        <a href="galeria.html" class="text-tierra-300">Galería</a>
-        <a href="contacto.html">Contacto</a>
+
+        <a
+          href="galeria.html"
+          class="border-b-2 border-tierra-300 pb-1 text-tierra-300"
+        >
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5"
+        >
+          Contacto
+        </a>
       </div>
+
+      <button
+        id="menu-button"
+        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        aria-expanded="false"
+      >
+        <span id="menu-open-icon">☰</span>
+        <span id="menu-close-icon" class="hidden">×</span>
+      </button>
     </nav>
+
+    <div id="mobile-menu" class="hidden px-4 py-5 lg:hidden">
+      <div class="flex flex-col gap-3">
+        <a class="mobile-link" href="../index.html">Inicio</a>
+        <a class="mobile-link" href="historia.html">Historia</a>
+        <a class="mobile-link" href="atractivos.html">Atractivos</a>
+        <a class="mobile-link" href="visita.html">Visita</a>
+        <a class="mobile-link text-tierra-300" href="galeria.html">Galería</a>
+        <a class="mobile-link" href="contacto.html">Contacto</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="bg-piedra-100 py-24 text-center">
       <div class="mx-auto max-w-4xl px-4">
-        <p
-          class="font-bold uppercase tracking-[0.25em] text-tierra-700"
-        >
-          Imágenes
+        <p class="font-bold uppercase tracking-[0.25em] text-tierra-700">
+          Imágenes del destino
         </p>
 
-        <h1 class="mt-4 font-display text-5xl font-bold">
+        <h1 class="mt-4 font-display text-5xl font-bold sm:text-6xl">
           Galería de Tihuanacu
         </h1>
+
+        <p class="mt-6 text-lg leading-8 text-piedra-600">
+          Una selección visual de sus monumentos, paisajes y detalles
+          arqueológicos.
+        </p>
       </div>
     </section>
 
@@ -65,55 +100,63 @@
         class="mx-auto grid max-w-7xl auto-rows-[280px] gap-5 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8"
       >
         <figure
-          class="gallery-item relative overflow-hidden rounded-3xl md:row-span-2"
+          class="gallery-card relative overflow-hidden rounded-3xl md:row-span-2"
         >
           <img
-            src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=900&q=85"
-            alt="Arquitectura ancestral"
-            class="gallery-image h-full w-full object-cover"
+            src="../assets/images/puerta-sol.jpg"
+            alt="Puerta del Sol"
+            class="gallery-image h-full w-full bg-piedra-300 object-cover"
           >
         </figure>
 
         <figure
-          class="gallery-item relative overflow-hidden rounded-3xl lg:col-span-2"
+          class="gallery-card relative overflow-hidden rounded-3xl lg:col-span-2"
         >
           <img
-            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=85"
-            alt="Paisaje arqueológico"
-            class="gallery-image h-full w-full object-cover"
+            src="../assets/images/kalasasaya.jpg"
+            alt="Kalasasaya"
+            class="gallery-image h-full w-full bg-piedra-300 object-cover"
           >
         </figure>
 
-        <figure class="gallery-item overflow-hidden rounded-3xl">
+        <figure class="gallery-card overflow-hidden rounded-3xl">
           <img
-            src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=700&q=85"
-            alt="Montañas andinas"
-            class="gallery-image h-full w-full object-cover"
+            src="../assets/images/paisaje.jpg"
+            alt="Paisaje andino"
+            class="gallery-image h-full w-full bg-piedra-300 object-cover"
           >
         </figure>
 
         <figure
-          class="gallery-item overflow-hidden rounded-3xl lg:col-span-2"
+          class="gallery-card overflow-hidden rounded-3xl lg:col-span-2"
         >
           <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
-            alt="Patrimonio e historia"
-            class="gallery-image h-full w-full object-cover"
+            src="../assets/images/akapana.jpg"
+            alt="Pirámide de Akapana"
+            class="gallery-image h-full w-full bg-piedra-300 object-cover"
           >
         </figure>
 
-        <figure class="gallery-item overflow-hidden rounded-3xl">
+        <figure class="gallery-card overflow-hidden rounded-3xl">
           <img
-            src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?auto=format&fit=crop&w=700&q=85"
-            alt="Detalles en piedra"
-            class="gallery-image h-full w-full object-cover"
+            src="../assets/images/monolito.jpg"
+            alt="Monolito de Tihuanacu"
+            class="gallery-image h-full w-full bg-piedra-300 object-cover"
+          >
+        </figure>
+
+        <figure class="gallery-card overflow-hidden rounded-3xl">
+          <img
+            src="../assets/images/templete.jpg"
+            alt="Templete semisubterráneo"
+            class="gallery-image h-full w-full bg-piedra-300 object-cover"
           >
         </figure>
       </div>
     </section>
   </main>
 
-  <footer class="bg-piedra-900 py-8 text-center text-white">
+  <footer class="bg-piedra-900 py-10 text-center text-white">
     © <span class="current-year"></span> Turismo Tihuanacu.
   </footer>
 

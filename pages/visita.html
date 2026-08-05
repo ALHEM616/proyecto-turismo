@@ -18,49 +18,80 @@
     rel="stylesheet"
   >
 
-  <script src="../js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="font-sans text-piedra-900">
+<body class="font-sans text-piedra-900 antialiased">
 
-  <header class="bg-piedra-900 py-5 text-white">
+  <header class="sticky top-0 z-50 bg-piedra-900 text-white shadow-lg">
     <nav
-      class="mx-auto flex max-w-7xl justify-between px-4 sm:px-6 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
     >
       <a href="../index.html" class="font-display text-xl font-bold">
         Tihuanacu
       </a>
 
-      <div class="hidden gap-7 lg:flex">
+      <div class="hidden items-center gap-7 lg:flex">
         <a href="../index.html">Inicio</a>
         <a href="historia.html">Historia</a>
         <a href="atractivos.html">Atractivos</a>
-        <a href="visita.html" class="text-tierra-300">Visita</a>
+
+        <a
+          href="visita.html"
+          class="border-b-2 border-tierra-300 pb-1 text-tierra-300"
+        >
+          Visita
+        </a>
+
         <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5"
+        >
+          Contacto
+        </a>
       </div>
+
+      <button
+        id="menu-button"
+        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        aria-expanded="false"
+      >
+        <span id="menu-open-icon">☰</span>
+        <span id="menu-close-icon" class="hidden">×</span>
+      </button>
     </nav>
+
+    <div id="mobile-menu" class="hidden px-4 py-5 lg:hidden">
+      <div class="flex flex-col gap-3">
+        <a class="mobile-link" href="../index.html">Inicio</a>
+        <a class="mobile-link" href="historia.html">Historia</a>
+        <a class="mobile-link" href="atractivos.html">Atractivos</a>
+        <a class="mobile-link text-tierra-300" href="visita.html">Visita</a>
+        <a class="mobile-link" href="galeria.html">Galería</a>
+        <a class="mobile-link" href="contacto.html">Contacto</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="bg-tierra-50 py-24 text-center">
       <div class="mx-auto max-w-4xl px-4">
-        <p
-          class="font-bold uppercase tracking-[0.25em] text-tierra-700"
-        >
+        <p class="font-bold uppercase tracking-[0.25em] text-tierra-700">
           Información útil
         </p>
 
-        <h1 class="mt-4 font-display text-5xl font-bold">
+        <h1 class="mt-4 font-display text-5xl font-bold sm:text-6xl">
           Planifica tu visita
         </h1>
 
         <p class="mt-6 text-lg leading-8 text-piedra-600">
-          Organiza el transporte, el horario y todo lo necesario para disfrutar
-          tu recorrido.
+          Organiza el transporte, el recorrido y todo lo necesario para
+          disfrutar Tihuanacu.
         </p>
       </div>
     </section>
@@ -69,21 +100,19 @@
       <div
         class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8"
       >
-        <article class="rounded-3xl bg-piedra-900 p-8 text-white">
-          <h2 class="font-display text-2xl font-bold">
-            Cómo llegar
-          </h2>
+        <article class="rounded-3xl bg-piedra-900 p-8 text-white shadow-soft">
+          <h2 class="font-display text-2xl font-bold">Cómo llegar</h2>
 
           <p class="mt-4 leading-7 text-piedra-200">
-            Puedes llegar desde La Paz mediante transporte público, operadores
-            turísticos o vehículo particular.
+            Puedes viajar desde La Paz utilizando transporte público, vehículo
+            particular o un servicio turístico.
           </p>
         </article>
 
-        <article class="rounded-3xl border border-piedra-200 bg-white p-8">
-          <h2 class="font-display text-2xl font-bold">
-            Qué llevar
-          </h2>
+        <article
+          class="rounded-3xl border border-piedra-200 bg-white p-8 shadow-soft"
+        >
+          <h2 class="font-display text-2xl font-bold">Qué llevar</h2>
 
           <p class="mt-4 leading-7 text-piedra-600">
             Lleva ropa abrigada, protector solar, agua, calzado cómodo y una
@@ -91,14 +120,14 @@
           </p>
         </article>
 
-        <article class="rounded-3xl border border-piedra-200 bg-white p-8">
-          <h2 class="font-display text-2xl font-bold">
-            Recomendaciones
-          </h2>
+        <article
+          class="rounded-3xl border border-piedra-200 bg-white p-8 shadow-soft"
+        >
+          <h2 class="font-display text-2xl font-bold">Recomendaciones</h2>
 
           <p class="mt-4 leading-7 text-piedra-600">
-            Respeta las áreas señalizadas y sigue las instrucciones del
-            personal del sitio.
+            Respeta las áreas señalizadas, las piezas arqueológicas y las
+            indicaciones del personal.
           </p>
         </article>
       </div>
@@ -109,12 +138,19 @@
         class="mx-auto grid max-w-7xl overflow-hidden rounded-3xl bg-piedra-900 lg:grid-cols-2"
       >
         <div class="p-10 text-white lg:p-16">
-          <h2 class="font-display text-4xl font-bold">
+          <p
+            class="font-bold uppercase tracking-[0.25em] text-tierra-300"
+          >
             Ubicación
+          </p>
+
+          <h2 class="mt-4 font-display text-4xl font-bold">
+            Tihuanacu, La Paz
           </h2>
 
           <p class="mt-5 leading-8 text-piedra-200">
-            Tihuanacu se encuentra en el departamento de La Paz, Bolivia.
+            El sitio arqueológico se encuentra en el departamento de La Paz,
+            Bolivia.
           </p>
 
           <a
@@ -138,7 +174,7 @@
     </section>
   </main>
 
-  <footer class="bg-piedra-900 py-8 text-center text-white">
+  <footer class="bg-piedra-900 py-10 text-center text-white">
     © <span class="current-year"></span> Turismo Tihuanacu.
   </footer>
 

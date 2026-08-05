@@ -18,31 +18,59 @@
     rel="stylesheet"
   >
 
-  <script src="../js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="font-sans text-piedra-900">
+<body class="font-sans text-piedra-900 antialiased">
 
-  <header class="bg-piedra-900 py-5 text-white">
+  <header class="sticky top-0 z-50 bg-piedra-900 text-white shadow-lg">
     <nav
-      class="mx-auto flex max-w-7xl justify-between px-4 sm:px-6 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
     >
       <a href="../index.html" class="font-display text-xl font-bold">
         Tihuanacu
       </a>
 
-      <div class="hidden gap-7 lg:flex">
+      <div class="hidden items-center gap-7 lg:flex">
         <a href="../index.html">Inicio</a>
         <a href="historia.html">Historia</a>
         <a href="atractivos.html">Atractivos</a>
         <a href="visita.html">Visita</a>
         <a href="galeria.html">Galería</a>
-        <a href="contacto.html" class="text-tierra-300">Contacto</a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5 text-white"
+        >
+          Contacto
+        </a>
       </div>
+
+      <button
+        id="menu-button"
+        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        aria-expanded="false"
+      >
+        <span id="menu-open-icon">☰</span>
+        <span id="menu-close-icon" class="hidden">×</span>
+      </button>
     </nav>
+
+    <div id="mobile-menu" class="hidden px-4 py-5 lg:hidden">
+      <div class="flex flex-col gap-3">
+        <a class="mobile-link" href="../index.html">Inicio</a>
+        <a class="mobile-link" href="historia.html">Historia</a>
+        <a class="mobile-link" href="atractivos.html">Atractivos</a>
+        <a class="mobile-link" href="visita.html">Visita</a>
+        <a class="mobile-link" href="galeria.html">Galería</a>
+        <a class="mobile-link text-tierra-300" href="contacto.html">
+          Contacto
+        </a>
+      </div>
+    </div>
   </header>
 
   <main class="bg-tierra-700 py-24 text-white">
@@ -56,13 +84,13 @@
           Escríbenos
         </p>
 
-        <h1 class="mt-4 font-display text-5xl font-bold">
+        <h1 class="mt-4 font-display text-5xl font-bold sm:text-6xl">
           Planifica tu experiencia
         </h1>
 
         <p class="mt-6 text-lg leading-8 text-tierra-100">
-          Envíanos tus consultas sobre transporte, visitas grupales y
-          recorridos turísticos.
+          Envíanos tus consultas sobre transporte, recorridos y visitas
+          grupales.
         </p>
 
         <div class="mt-10 space-y-4">
@@ -92,7 +120,8 @@
             name="name"
             type="text"
             required
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3 focus:border-tierra-600 focus:outline-none"
+            autocomplete="name"
+            class="w-full rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
           >
         </div>
 
@@ -106,7 +135,8 @@
             name="email"
             type="email"
             required
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3 focus:border-tierra-600 focus:outline-none"
+            autocomplete="email"
+            class="w-full rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
           >
         </div>
 
@@ -119,7 +149,7 @@
             id="subject"
             name="subject"
             required
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3"
+            class="w-full rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600"
           >
             <option value="">Selecciona una opción</option>
             <option value="informacion">Información general</option>
@@ -139,13 +169,13 @@
             name="message"
             rows="5"
             required
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3 focus:border-tierra-600 focus:outline-none"
+            class="w-full resize-none rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          class="mt-7 w-full rounded-xl bg-piedra-900 px-6 py-3.5 font-bold text-white hover:bg-tierra-700"
+          class="mt-7 w-full rounded-xl bg-piedra-900 px-6 py-3.5 font-bold text-white transition hover:bg-tierra-700"
         >
           Enviar consulta
         </button>
@@ -153,7 +183,16 @@
         <p
           id="form-message"
           class="mt-4 hidden rounded-xl bg-green-50 px-4 py-3 font-semibold text-green-800"
+          role="status"
         ></p>
       </form>
     </section>
   </main>
+
+  <footer class="bg-piedra-900 py-10 text-center text-white">
+    © <span class="current-year"></span> Turismo Tihuanacu.
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

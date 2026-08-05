@@ -1,123 +1,103 @@
 "use strict";
 
-const menuButton = document.getElementById("menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
-const menuOpenIcon = document.getElementById("menu-open-icon");
-const menuCloseIcon = document.getElementById("menu-close-icon");
-const mobileLinks = document.querySelectorAll(".mobile-link");
-const currentYearElements = document.querySelectorAll(".current-year");
-const scrollTopButton = document.getElementById("scroll-top-button");
-const contactForm = document.getElementById("contact-form");
-const formMessage = document.getElementById("form-message");
+function initializeMobileMenu() {
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const openIcon = document.getElementById("menu-open-icon");
+  const closeIcon = document.getElementById("menu-close-icon");
 
-function setMobileMenuState(isOpen) {
-  if (
-    !menuButton ||
-    !mobileMenu ||
-    !menuOpenIcon ||
-    !menuCloseIcon
-  ) {
+  if (!menuButton || !mobileMenu || !openIcon || !closeIcon) {
     return;
   }
 
-  mobileMenu.classList.toggle("hidden", !isOpen);
-  menuOpenIcon.classList.toggle("hidden", isOpen);
-  menuCloseIcon.classList.toggle("hidden", !isOpen);
+  function setMenuState(isOpen) {
+    mobileMenu.classList.toggle("hidden", !isOpen);
+    openIcon.classList.toggle("hidden", isOpen);
+    closeIcon.classList.toggle("hidden", !isOpen);
 
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-  menuButton.setAttribute(
-    "aria-label",
-    isOpen ? "Cerrar menú" : "Abrir menú"
-  );
-}
-
-function toggleMobileMenu() {
-  if (!menuButton) {
-    return;
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Cerrar menú" : "Abrir menú"
+    );
   }
 
-  const isOpen =
-    menuButton.getAttribute("aria-expanded") === "true";
+  menuButton.addEventListener("click", () => {
+    const isOpen =
+      menuButton.getAttribute("aria-expanded") === "true";
 
-  setMobileMenuState(!isOpen);
-}
+    setMenuState(!isOpen);
+  });
 
-function handleScrollTopVisibility() {
-  if (!scrollTopButton) {
-    return;
-  }
-
-  const shouldShowButton = window.scrollY > 500;
-
-  scrollTopButton.classList.toggle("hidden", !shouldShowButton);
-  scrollTopButton.classList.toggle("flex", shouldShowButton);
-}
-
-function initializeMenu() {
-  if (!menuButton) {
-    return;
-  }
-
-  menuButton.addEventListener("click", toggleMobileMenu);
-
-  mobileLinks.forEach((link) => {
+  document.querySelectorAll(".mobile-link").forEach((link) => {
     link.addEventListener("click", () => {
-      setMobileMenuState(false);
+      setMenuState(false);
     });
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024) {
-      setMobileMenuState(false);
+      setMenuState(false);
     }
   });
 }
 
-function initializeScrollButton() {
-  if (!scrollTopButton) {
+function initializeCurrentYear() {
+  const year = String(new Date().getFullYear());
+
+  document.querySelectorAll(".current-year").forEach((element) => {
+    element.textContent = year;
+  });
+}
+
+function initializeScrollTopButton() {
+  const button = document.getElementById("scroll-top-button");
+
+  if (!button) {
     return;
   }
 
-  window.addEventListener("scroll", handleScrollTopVisibility);
+  function updateButton() {
+    const visible = window.scrollY > 500;
 
-  scrollTopButton.addEventListener("click", () => {
+    button.classList.toggle("hidden", !visible);
+    button.classList.toggle("flex", visible);
+  }
+
+  button.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   });
 
-  handleScrollTopVisibility();
+  window.addEventListener("scroll", updateButton);
+  updateButton();
 }
 
 function initializeContactForm() {
-  if (!contactForm || !formMessage) {
+  const form = document.getElementById("contact-form");
+  const message = document.getElementById("form-message");
+
+  if (!form || !message) {
     return;
   }
 
-  contactForm.addEventListener("submit", (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const formData = new FormData(contactForm);
+    const formData = new FormData(form);
     const name = String(formData.get("name") || "").trim();
 
-    formMessage.textContent =
+    message.textContent =
       `Gracias, ${name}. Tu consulta fue registrada correctamente.`;
 
-    formMessage.classList.remove("hidden");
-    contactForm.reset();
+    message.classList.remove("hidden");
+    form.reset();
   });
 }
 
-function initializeYear() {
-  const currentYear = new Date().getFullYear();
-
-  currentYearElements.forEach((element) => {
-    element.textContent = String(currentYear);
-  });
-}
-
-initializeMenu();
-initializeScrollButton();
+initializeMobileMenu();
+initializeCurrentYear();
+initializeScrollTopButton();
 initializeContactForm();
-initializeYear();

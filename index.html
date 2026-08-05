@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +10,7 @@
 
   <meta
     name="description"
-    content="Descubre Tihuanacu, su historia, cultura y atractivos turísticos."
+    content="Descubre la historia, cultura y atractivos turísticos de Tihuanacu."
   >
 
   <title>Tihuanacu | Inicio</title>
@@ -24,8 +23,8 @@
     rel="stylesheet"
   >
 
-  <script src="js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -33,10 +32,11 @@
 <body class="font-sans text-piedra-900 antialiased">
 
   <header
-    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-piedra-900/95 text-white backdrop-blur-md"
+    class="sticky top-0 z-50 border-b border-white/10 bg-piedra-900 text-white shadow-lg"
   >
     <nav
       class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      aria-label="Navegación principal"
     >
       <a href="index.html" class="flex items-center gap-3">
         <span
@@ -46,12 +46,12 @@
         </span>
 
         <span>
-          <span class="block font-display text-lg font-bold">
+          <span class="block font-display text-lg font-bold leading-none">
             Tihuanacu
           </span>
 
           <span
-            class="block text-xs uppercase tracking-[0.25em] text-tierra-200"
+            class="mt-1 block text-xs uppercase tracking-[0.25em] text-tierra-200"
           >
             Bolivia
           </span>
@@ -61,35 +61,36 @@
       <div class="hidden items-center gap-7 lg:flex">
         <a
           href="index.html"
-          class="font-semibold text-tierra-300"
+          class="nav-link border-b-2 border-tierra-300 pb-1 font-semibold text-tierra-300"
+          aria-current="page"
         >
           Inicio
         </a>
 
         <a
           href="pages/historia.html"
-          class="transition hover:text-tierra-300"
+          class="nav-link hover:text-tierra-300"
         >
           Historia
         </a>
 
         <a
           href="pages/atractivos.html"
-          class="transition hover:text-tierra-300"
+          class="nav-link hover:text-tierra-300"
         >
           Atractivos
         </a>
 
         <a
           href="pages/visita.html"
-          class="transition hover:text-tierra-300"
+          class="nav-link hover:text-tierra-300"
         >
           Visita
         </a>
 
         <a
           href="pages/galeria.html"
-          class="transition hover:text-tierra-300"
+          class="nav-link hover:text-tierra-300"
         >
           Galería
         </a>
@@ -105,9 +106,10 @@
       <button
         id="menu-button"
         type="button"
-        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 lg:hidden"
+        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 transition hover:bg-white/10 lg:hidden"
         aria-label="Abrir menú"
         aria-expanded="false"
+        aria-controls="mobile-menu"
       >
         <svg
           id="menu-open-icon"
@@ -115,6 +117,7 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path
             stroke-linecap="round"
@@ -130,6 +133,7 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path
             stroke-linecap="round"
@@ -148,7 +152,7 @@
       <div class="flex flex-col gap-2">
         <a
           href="index.html"
-          class="mobile-link rounded-lg px-4 py-3 hover:bg-white/10"
+          class="mobile-link rounded-lg bg-white/10 px-4 py-3 text-tierra-300"
         >
           Inicio
         </a>
@@ -183,7 +187,7 @@
 
         <a
           href="pages/contacto.html"
-          class="mobile-link rounded-lg bg-tierra-600 px-4 py-3 text-center font-semibold"
+          class="mobile-link mt-2 rounded-lg bg-tierra-600 px-4 py-3 text-center font-semibold"
         >
           Contacto
         </a>
@@ -193,20 +197,15 @@
 
   <main>
     <section
-      class="relative flex min-h-screen items-center overflow-hidden bg-piedra-900"
+      class="hero-background relative min-h-[720px] overflow-hidden"
+      style="background-image: url('assets/images/inicio-hero.jpg');"
     >
-      <img
-        src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=85"
-        alt="Paisaje arqueológico andino"
-        class="absolute inset-0 h-full w-full object-cover"
-      >
-
       <div class="hero-overlay absolute inset-0"></div>
 
       <div
-        class="relative mx-auto w-full max-w-7xl px-4 pb-20 pt-36 sm:px-6 lg:px-8"
+        class="relative mx-auto flex min-h-[720px] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8"
       >
-        <div class="max-w-3xl">
+        <div class="max-w-3xl text-white">
           <span
             class="inline-flex rounded-full border border-tierra-300/40 bg-black/20 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-tierra-200"
           >
@@ -214,30 +213,28 @@
           </span>
 
           <h1
-            class="mt-6 font-display text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl"
+            class="mt-6 font-display text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl"
           >
             Descubre la grandeza de
             <span class="text-tierra-300">Tihuanacu</span>
           </h1>
 
-          <p
-            class="mt-7 max-w-2xl text-lg leading-8 text-piedra-100 sm:text-xl"
-          >
-            Explora su arquitectura monumental, la memoria andina y los
-            paisajes del altiplano boliviano.
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-piedra-100 sm:text-xl">
+            Explora una civilización donde la arquitectura monumental, la
+            historia andina y el paisaje del altiplano se encuentran.
           </p>
 
           <div class="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="pages/atractivos.html"
-              class="rounded-full bg-tierra-600 px-7 py-3.5 text-center font-semibold text-white transition hover:bg-tierra-500"
+              class="rounded-full bg-tierra-600 px-7 py-3.5 text-center font-semibold transition hover:bg-tierra-500"
             >
               Explorar atractivos
             </a>
 
             <a
               href="pages/visita.html"
-              class="rounded-full border border-white/50 bg-white/10 px-7 py-3.5 text-center font-semibold text-white transition hover:bg-white hover:text-piedra-900"
+              class="rounded-full border border-white/50 bg-white/10 px-7 py-3.5 text-center font-semibold transition hover:bg-white hover:text-piedra-900"
             >
               Planificar visita
             </a>
@@ -246,16 +243,16 @@
       </div>
     </section>
 
-    <section class="relative overflow-hidden py-24">
-      <div class="pattern-bg absolute inset-0 opacity-40"></div>
+    <section class="relative overflow-hidden bg-white py-24">
+      <div class="pattern-background absolute inset-0 opacity-40"></div>
 
       <div
         class="relative mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
       >
         <img
-          src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=1200&q=85"
-          alt="Arquitectura en piedra"
-          class="h-[500px] w-full rounded-[2rem] object-cover shadow-soft"
+          src="assets/images/historia-arquitectura.jpg"
+          alt="Arquitectura de piedra de Tihuanacu"
+          class="h-[500px] w-full rounded-[2rem] bg-piedra-300 object-cover shadow-soft"
         >
 
         <div>
@@ -265,29 +262,27 @@
             Conoce Tihuanacu
           </p>
 
-          <h2
-            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
-          >
+          <h2 class="mt-4 font-display text-4xl font-bold sm:text-5xl">
             Historia, cultura y tradición
           </h2>
 
           <p class="mt-6 text-lg leading-8 text-piedra-600">
-            Tihuanacu es uno de los destinos culturales más importantes del
-            altiplano boliviano. Sus monumentos permiten conocer una de las
-            civilizaciones más influyentes de la región andina.
+            Tihuanacu es uno de los destinos culturales más representativos del
+            altiplano boliviano. Sus monumentos permiten conocer el desarrollo
+            de una de las civilizaciones más importantes de los Andes.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-4">
             <a
               href="pages/historia.html"
-              class="rounded-full bg-piedra-900 px-6 py-3 font-semibold text-white"
+              class="rounded-full bg-piedra-900 px-6 py-3 font-semibold text-white transition hover:bg-tierra-700"
             >
               Conocer la historia
             </a>
 
             <a
               href="pages/galeria.html"
-              class="rounded-full border border-piedra-400 px-6 py-3 font-semibold"
+              class="rounded-full border border-piedra-400 px-6 py-3 font-semibold transition hover:bg-piedra-100"
             >
               Ver galería
             </a>
@@ -302,7 +297,7 @@
           <p
             class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-300"
           >
-            Explora el sitio
+            Lugares destacados
           </p>
 
           <h2 class="mt-4 font-display text-4xl font-bold sm:text-5xl">
@@ -313,9 +308,9 @@
         <div class="mt-12 grid gap-8 md:grid-cols-3">
           <article class="overflow-hidden rounded-3xl bg-white text-piedra-900">
             <img
-              src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=85"
+              src="assets/images/puerta-sol.jpg"
               alt="Puerta del Sol"
-              class="h-56 w-full object-cover"
+              class="h-56 w-full bg-piedra-300 object-cover"
             >
 
             <div class="p-7">
@@ -324,16 +319,16 @@
               </h3>
 
               <p class="mt-3 leading-7 text-piedra-600">
-                Monumento destacado por sus relieves y simbolismo.
+                Monumento reconocido por sus relieves y simbolismo.
               </p>
             </div>
           </article>
 
           <article class="overflow-hidden rounded-3xl bg-white text-piedra-900">
             <img
-              src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?auto=format&fit=crop&w=900&q=85"
-              alt="Kalasasaya"
-              class="h-56 w-full object-cover"
+              src="assets/images/kalasasaya.jpg"
+              alt="Templo de Kalasasaya"
+              class="h-56 w-full bg-piedra-300 object-cover"
             >
 
             <div class="p-7">
@@ -342,16 +337,16 @@
               </h3>
 
               <p class="mt-3 leading-7 text-piedra-600">
-                Espacio ceremonial construido con grandes bloques de piedra.
+                Espacio ceremonial rodeado por grandes bloques de piedra.
               </p>
             </div>
           </article>
 
           <article class="overflow-hidden rounded-3xl bg-white text-piedra-900">
             <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
+              src="assets/images/akapana.jpg"
               alt="Pirámide de Akapana"
-              class="h-56 w-full object-cover"
+              class="h-56 w-full bg-piedra-300 object-cover"
             >
 
             <div class="p-7">
@@ -365,22 +360,13 @@
             </div>
           </article>
         </div>
-
-        <div class="mt-10 text-center">
-          <a
-            href="pages/atractivos.html"
-            class="inline-flex rounded-full bg-tierra-600 px-7 py-3.5 font-semibold"
-          >
-            Ver todos los atractivos
-          </a>
-        </div>
       </div>
     </section>
   </main>
 
   <footer class="bg-piedra-900 text-white">
     <div
-      class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 text-center sm:px-6 md:flex-row md:items-center md:justify-between md:text-left lg:px-8"
+      class="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 px-4 py-10 text-center sm:px-6 md:flex-row md:items-center md:justify-between md:text-left lg:px-8"
     >
       <p>
         © <span class="current-year"></span> Turismo Tihuanacu.
@@ -388,7 +374,7 @@
 
       <a
         href="pages/contacto.html"
-        class="font-semibold text-tierra-300"
+        class="font-semibold text-tierra-300 hover:text-white"
       >
         Contacto
       </a>
@@ -407,3 +393,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+

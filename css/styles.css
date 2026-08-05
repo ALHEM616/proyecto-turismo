@@ -3,33 +3,30 @@ html {
 }
 
 body {
-  background-color: #fffaf5;
+  background: #fffaf5;
+}
+
+.hero-background {
+  background-color: #423b35;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-overlay {
   background:
     linear-gradient(
       90deg,
-      rgba(32, 24, 18, 0.92) 0%,
-      rgba(32, 24, 18, 0.68) 48%,
-      rgba(32, 24, 18, 0.28) 100%
+      rgba(35, 28, 24, 0.96) 0%,
+      rgba(35, 28, 24, 0.78) 48%,
+      rgba(35, 28, 24, 0.35) 100%
     );
 }
 
-.page-overlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(32, 24, 18, 0.9),
-      rgba(32, 24, 18, 0.45)
-    );
-}
-
-.pattern-bg {
+.pattern-background {
   background-image:
     radial-gradient(
       circle at 1px 1px,
-      rgba(150, 59, 29, 0.15) 1px,
+      rgba(150, 59, 29, 0.16) 1px,
       transparent 0
     );
   background-size: 24px 24px;
@@ -39,7 +36,23 @@ body {
   transition: transform 500ms ease;
 }
 
-.gallery-item:hover .gallery-image {
-  transform: scale(1.06);
+.gallery-card:hover .gallery-image {
+  transform: scale(1.07);
 }
 
+.nav-link {
+  transition:
+    color 200ms ease,
+    background-color 200ms ease;
+}
+
+.timeline-line {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #d96b2b 8%,
+      #d96b2b 92%,
+      transparent
+    );
+}

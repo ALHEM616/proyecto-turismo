@@ -18,15 +18,17 @@
     rel="stylesheet"
   >
 
-  <script src="../js/tailwind-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="font-sans text-piedra-900">
+<body class="font-sans text-piedra-900 antialiased">
 
-  <header class="bg-piedra-900 text-white">
+  <header
+    class="sticky top-0 z-50 border-b border-white/10 bg-piedra-900 text-white shadow-lg"
+  >
     <nav
       class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
     >
@@ -34,22 +36,35 @@
         Tihuanacu
       </a>
 
-      <div class="hidden gap-7 lg:flex">
-        <a href="../index.html">Inicio</a>
-        <a href="historia.html">Historia</a>
-        <a href="atractivos.html" class="text-tierra-300">Atractivos</a>
-        <a href="visita.html">Visita</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
+      <div class="hidden items-center gap-7 lg:flex">
+        <a href="../index.html" class="hover:text-tierra-300">Inicio</a>
+        <a href="historia.html" class="hover:text-tierra-300">Historia</a>
+
+        <a
+          href="atractivos.html"
+          class="border-b-2 border-tierra-300 pb-1 text-tierra-300"
+        >
+          Atractivos
+        </a>
+
+        <a href="visita.html" class="hover:text-tierra-300">Visita</a>
+        <a href="galeria.html" class="hover:text-tierra-300">Galería</a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5 font-semibold"
+        >
+          Contacto
+        </a>
       </div>
 
       <button
         id="menu-button"
-        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 lg:hidden"
         aria-expanded="false"
       >
-        <span id="menu-open-icon">☰</span>
-        <span id="menu-close-icon" class="hidden">✕</span>
+        <span id="menu-open-icon" class="text-2xl">☰</span>
+        <span id="menu-close-icon" class="hidden text-2xl">×</span>
       </button>
     </nav>
 
@@ -57,13 +72,33 @@
       id="mobile-menu"
       class="hidden border-t border-white/10 px-4 py-5 lg:hidden"
     >
-      <div class="flex flex-col gap-4">
-        <a class="mobile-link" href="../index.html">Inicio</a>
-        <a class="mobile-link" href="historia.html">Historia</a>
-        <a class="mobile-link" href="atractivos.html">Atractivos</a>
-        <a class="mobile-link" href="visita.html">Visita</a>
-        <a class="mobile-link" href="galeria.html">Galería</a>
-        <a class="mobile-link" href="contacto.html">Contacto</a>
+      <div class="flex flex-col gap-2">
+        <a class="mobile-link rounded-lg px-4 py-3" href="../index.html">
+          Inicio
+        </a>
+
+        <a class="mobile-link rounded-lg px-4 py-3" href="historia.html">
+          Historia
+        </a>
+
+        <a
+          class="mobile-link rounded-lg bg-white/10 px-4 py-3 text-tierra-300"
+          href="atractivos.html"
+        >
+          Atractivos
+        </a>
+
+        <a class="mobile-link rounded-lg px-4 py-3" href="visita.html">
+          Visita
+        </a>
+
+        <a class="mobile-link rounded-lg px-4 py-3" href="galeria.html">
+          Galería
+        </a>
+
+        <a class="mobile-link rounded-lg px-4 py-3" href="contacto.html">
+          Contacto
+        </a>
       </div>
     </div>
   </header>
@@ -72,15 +107,15 @@
     <section class="bg-tierra-700 py-24 text-center text-white">
       <div class="mx-auto max-w-4xl px-4">
         <p class="font-bold uppercase tracking-[0.25em] text-tierra-200">
-          Explora
+          Explora el patrimonio
         </p>
 
-        <h1 class="mt-4 font-display text-5xl font-bold">
+        <h1 class="mt-4 font-display text-5xl font-bold sm:text-6xl">
           Atractivos arqueológicos
         </h1>
 
         <p class="mt-6 text-lg leading-8 text-tierra-100">
-          Conoce los principales monumentos y espacios ceremoniales de
+          Conoce los monumentos y espacios ceremoniales más importantes de
           Tihuanacu.
         </p>
       </div>
@@ -92,46 +127,42 @@
       >
         <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=85"
+            src="../assets/images/puerta-sol.jpg"
             alt="Puerta del Sol"
-            class="h-64 w-full object-cover"
+            class="h-64 w-full bg-piedra-300 object-cover"
           >
 
           <div class="p-7">
-            <h2 class="font-display text-2xl font-bold">
-              Puerta del Sol
-            </h2>
+            <h2 class="font-display text-2xl font-bold">Puerta del Sol</h2>
 
             <p class="mt-3 leading-7 text-piedra-600">
-              Monumento tallado en piedra reconocido por sus relieves y
-              símbolos.
+              Monumento tallado en piedra, reconocido por sus relieves y
+              símbolos ceremoniales.
             </p>
           </div>
         </article>
 
         <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?auto=format&fit=crop&w=900&q=85"
+            src="../assets/images/kalasasaya.jpg"
             alt="Kalasasaya"
-            class="h-64 w-full object-cover"
+            class="h-64 w-full bg-piedra-300 object-cover"
           >
 
           <div class="p-7">
-            <h2 class="font-display text-2xl font-bold">
-              Kalasasaya
-            </h2>
+            <h2 class="font-display text-2xl font-bold">Kalasasaya</h2>
 
             <p class="mt-3 leading-7 text-piedra-600">
-              Espacio ceremonial rodeado por pilares y muros de piedra.
+              Espacio ceremonial formado por muros y grandes pilares de piedra.
             </p>
           </div>
         </article>
 
         <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
-            alt="Akapana"
-            class="h-64 w-full object-cover"
+            src="../assets/images/akapana.jpg"
+            alt="Pirámide de Akapana"
+            class="h-64 w-full bg-piedra-300 object-cover"
           >
 
           <div class="p-7">
@@ -140,17 +171,17 @@
             </h2>
 
             <p class="mt-3 leading-7 text-piedra-600">
-              Plataforma monumental que evidencia la planificación urbana del
-              sitio.
+              Plataforma monumental que evidencia la planificación
+              arquitectónica del sitio.
             </p>
           </div>
         </article>
 
         <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=900&q=85"
+            src="../assets/images/templete.jpg"
             alt="Templete semisubterráneo"
-            class="h-64 w-full object-cover"
+            class="h-64 w-full bg-piedra-300 object-cover"
           >
 
           <div class="p-7">
@@ -159,7 +190,7 @@
             </h2>
 
             <p class="mt-3 leading-7 text-piedra-600">
-              Espacio ceremonial conocido por las cabezas talladas en sus
+              Espacio ceremonial conocido por las esculturas integradas en sus
               muros.
             </p>
           </div>
@@ -167,18 +198,16 @@
 
         <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=85"
-            alt="Monolitos"
-            class="h-64 w-full object-cover"
+            src="../assets/images/monolito.jpg"
+            alt="Monolito de Tihuanacu"
+            class="h-64 w-full bg-piedra-300 object-cover"
           >
 
           <div class="p-7">
-            <h2 class="font-display text-2xl font-bold">
-              Monolitos
-            </h2>
+            <h2 class="font-display text-2xl font-bold">Monolitos</h2>
 
             <p class="mt-3 leading-7 text-piedra-600">
-              Esculturas de piedra que representan personajes y símbolos
+              Esculturas que representan personajes, símbolos y elementos
               ceremoniales.
             </p>
           </div>
@@ -186,19 +215,17 @@
 
         <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1531276262976-7afc1c8f5a3c?auto=format&fit=crop&w=900&q=85"
-            alt="Museo de sitio"
-            class="h-64 w-full object-cover"
+            src="../assets/images/paisaje.jpg"
+            alt="Paisaje del altiplano"
+            class="h-64 w-full bg-piedra-300 object-cover"
           >
 
           <div class="p-7">
-            <h2 class="font-display text-2xl font-bold">
-              Museos de sitio
-            </h2>
+            <h2 class="font-display text-2xl font-bold">Paisaje andino</h2>
 
             <p class="mt-3 leading-7 text-piedra-600">
-              Colecciones que explican el arte, la tecnología y la vida de la
-              civilización.
+              El entorno del altiplano complementa la experiencia histórica y
+              cultural.
             </p>
           </div>
         </article>
@@ -206,7 +233,7 @@
     </section>
   </main>
 
-  <footer class="bg-piedra-900 py-8 text-center text-white">
+  <footer class="bg-piedra-900 py-10 text-center text-white">
     © <span class="current-year"></span> Turismo Tihuanacu.
   </footer>
 
