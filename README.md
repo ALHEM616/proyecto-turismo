@@ -1,4 +1,10 @@
 # Proyecto turistico
 ## Integrantes:
 
-Nilo Centellas
+
+##  eso es una prueba
+``
+	INTEGRANTES
+``
+- Moises Mojica
+- Nilo Centellas

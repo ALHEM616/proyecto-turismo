@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre el Centro Histórico de Lima</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Para el scroll suave al hacer clic en el menú */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navegación -->
+    <nav class="absolute top-0 w-full z-50 p-6 flex justify-between items-center text-white">
+        <div class="text-2xl font-bold font-serif tracking-wider">
+            Visita<span class="text-yellow-400">Lima</span>
+        </div>
+        <ul class="hidden md:flex space-x-6 font-medium">
+            <li><a href="#inicio" class="hover:text-yellow-400 transition-colors">Inicio</a></li>
+            <li><a href="#historia" class="hover:text-yellow-400 transition-colors">Historia</a></li>
+            <li><a href="#destinos" class="hover:text-yellow-400 transition-colors">Imperdibles</a></li>
+            <li><a href="#galeria" class="hover:text-yellow-400 transition-colors">Galería</a></li>
+            <li><a href="#ubicacion" class="hover:text-yellow-400 transition-colors">Ubicación</a></li>
+        </ul>
+        <button class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </nav>
+
+    <!-- Sección Principal (Hero) -->
+    <header id="inicio" class="relative h-screen flex items-center justify-center text-center">
+        <div class="absolute inset-0 z-0">
+            <!-- Imagen de fondo corregida -->
+            <img src="https://images.unsplash.com/photo-1587825027984-c42827ea80fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Plaza de Armas de Lima" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+
+        <div class="relative z-10 px-4 max-w-4xl">
+            <p class="text-yellow-400 font-semibold tracking-widest uppercase mb-4">Patrimonio Cultural de la Humanidad</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 font-serif leading-tight">
+                La Ciudad de los Reyes te espera
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-200 mb-10">
+                Camina por calles llenas de historia, arquitectura colonial y una gastronomía que cautiva al mundo.
+            </p>
+            <a href="#destinos" class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                Comienza tu recorrido
+            </a>
+        </div>
+    </header>
+
+    <!-- Breve Introducción -->
+    <section id="historia" class="py-20 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold text-gray-800 mb-6">El corazón de la historia peruana</h2>
+        <div class="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+        <p class="text-lg text-gray-600 leading-relaxed">
+            Fundada en 1535, el Centro Histórico de Lima conserva sus icónicos balcones de madera, majestuosas iglesias barrocas y plazas que han sido testigos de la historia de Sudamérica. Declarado Patrimonio de la Humanidad por la UNESCO en 1988, es un museo vivo donde el pasado y el presente vibran en cada esquina.
+        </p>
+    </section>
+
+    <!-- Destinos Imperdibles -->
+    <section id="destinos" class="bg-gray-100 py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-serif font-bold text-center text-gray-800 mb-16">Lugares que no te puedes perder</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1577908920199-659f13c6b249?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Catedral de Lima" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Basílica y Catedral</h3>
+                        <p class="text-gray-600 mb-4">Una joya arquitectónica renacentista y neoclásica que domina la Plaza Mayor. Alberga los restos del conquistador Francisco Pizarro.</p>
+                        <a href="#" class="text-yellow-600 font-bold hover:text-yellow-500 transition-colors">Saber más &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1629851723432-8dfb5a2be10c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Convento de San Francisco" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Catacumbas de San Francisco</h3>
+                        <p class="text-gray-600 mb-4">Desciende a las misteriosas galerías subterráneas que sirvieron como el antiguo cementerio de la ciudad en la época colonial.</p>
+                        <a href="#" class="text-yellow-600 font-bold hover:text-yellow-500 transition-colors">Saber más &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533068997395-8e775191e3e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Balcones de Lima" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Plaza San Martín</h3>
+                        <p class="text-gray-600 mb-4">Rodeada de imponentes edificios blancos de estilo neocolonial y afrancesado. El corazón de la vida bohemia y cultural limeña.</p>
+                        <a href="#" class="text-yellow-600 font-bold hover:text-yellow-500 transition-colors">Saber más &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Galería Fotográfica -->
+    <section id="galeria" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-serif font-bold text-center text-gray-800 mb-6">La belleza de Lima en imágenes</h2>
+        <div class="w-24 h-1 bg-yellow-400 mx-auto mb-12"></div>
+        
+        <!-- Grid de Imágenes -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="overflow-hidden rounded-lg shadow-md group h-64">
+                <img src="https://images.unsplash.com/photo-1526466961132-84196da3450f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Calles de Lima" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md group h-64">
+                <img src="https://images.unsplash.com/photo-1510444317132-73d7494f6f89?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Arquitectura Peruana" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md group h-64">
+                <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Detalle Colonial" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md group h-64">
+                <img src="https://images.unsplash.com/photo-1610441996767-f58c7344f6f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cultura Limeña" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md group h-64">
+                <img src="https://images.unsplash.com/photo-1616712391081-33103233ee51?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Balcones" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md group h-64">
+                <img src="https://images.unsplash.com/photo-1558778434-2e23da05debb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Centro de Lima Noche" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa de Ubicación -->
+    <section id="ubicacion" class="bg-gray-100 py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-serif font-bold text-gray-800 mb-6">Tu punto de partida</h2>
+            <div class="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+                La histórica Plaza de Armas de Lima es el lugar ideal para comenzar tu recorrido. Encuéntranos en el centro exacto de la capital peruana.
+            </p>
+            
+            <div class="w-full h-96 relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9682708304953!2d-77.03212892404642!3d-12.046374888194411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b61c92a6c1%3A0x6b449830da0f2cc4!2sPlaza%20de%20Armas%20de%20Lima!5e0!3m2!1ses!2spe!4v1714578129384!5m2!1ses!2spe" 
+                    class="absolute top-0 left-0 w-full h-full border-0" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner CTA (Call to Action) -->
+    <section class="py-24 bg-gray-900 text-center text-white px-6">
+        <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6">¿Listo para vivir la experiencia?</h2>
+        <p class="text-gray-300 mb-10 max-w-2xl mx-auto text-lg">Reserva un tour guiado a pie, prueba los mejores pisco sours en el Gran Hotel Bolívar y déjate encantar por la historia viva de Perú.</p>
+        <a href="#" class="inline-block border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 font-bold py-3 px-8 rounded-full transition-all">
+            Planificar mi viaje
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 text-center text-sm">
+        <p>&copy; 2026 VisitaLima Turismo. Todos los derechos reservados.</p>
+        <p class="mt-2">Hecho para promover el patrimonio cultural peruano.</p>
+    </footer>
+
+</body>
+</html>
