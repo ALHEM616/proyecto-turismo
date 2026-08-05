@@ -10,3 +10,4 @@
 - Nilo Centellas
 - César Alca
 - Ricardo Ventura
+- Josimar Velasquez Merida
