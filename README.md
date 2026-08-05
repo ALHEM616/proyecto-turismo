@@ -1,8 +1,8 @@
 # Proyecto turistico
+
+
 ## Integrantes:
 
-
-##  eso es una prueba
 ``
 	INTEGRANTES
 ``
@@ -11,3 +11,4 @@
 - César Alca
 - Ricardo Ventura
 - Josimar Velasquez Merida
+- Jerson Tasilla Culqui
