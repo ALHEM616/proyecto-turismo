@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahía Ballena - Costa Rica</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+.hero img{animation:zoom 18s ease-in-out infinite alternate}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+</style>
+</head>
+<body class="bg-slate-50 text-gray-700">
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur text-white">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+<h1 class="font-bold text-2xl">Bahía Ballena</h1>
+<div class="space-x-6 hidden md:block">
+<a href="#historia" class="hover:text-emerald-300">Destino</a>
+<a href="#atracciones" class="hover:text-emerald-300">Atracciones</a>
+<a href="#contacto" class="hover:text-emerald-300">Visita</a>
+</div>
+</div>
+</nav>
+
+<header class="hero relative h-screen overflow-hidden">
+<img src="images/cola-ballena.jpg"
+class="absolute inset-0 w-full h-full object-cover"
+alt="Cola de la Ballena">
+
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70"></div>
+
+<div class="relative z-10 h-full flex items-center justify-center">
+<div class="text-center text-white px-6 max-w-4xl">
+<p class="uppercase tracking-[8px] text-emerald-300">Costa Rica • Pacífico Sur</p>
+<h1 class="text-6xl md:text-8xl font-extrabold mt-5">Bahía Ballena</h1>
+<p class="mt-8 text-xl md:text-2xl">
+Descubre uno de los destinos naturales más impresionantes de Costa Rica,
+hogar del Parque Nacional Marino Ballena y de la famosa Cola de la Ballena.
+</p>
+<a href="#historia"
+class="inline-block mt-10 bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-full text-lg font-semibold">
+Explorar
+</a>
+</div>
+</div>
+
+<div class="absolute bottom-5 right-5 bg-black/60 text-white text-xs px-4 py-2 rounded-full">
+Fotografía: Archivo del proyecto (uso educativo)
+</div>
+</header>
+
+<section id="historia" class="py-20">
+<div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-4xl font-bold text-emerald-700 mb-6">Bienvenido al Paraíso</h2>
+<p class="leading-8 mb-4">
+Bahía Ballena está ubicada en el cantón de Osa, Puntarenas. Es reconocida
+por su riqueza natural, playas, bosques tropicales y la posibilidad de
+observar ballenas jorobadas durante sus migraciones.
+</p>
+<p class="leading-8">
+Su principal atractivo es la formación natural conocida como
+<strong>La Cola de la Ballena</strong>, visible durante la marea baja.
+</p>
+</div>
+
+<img src="images/cola-ballena.jpg"
+class="rounded-3xl shadow-2xl w-full h-[420px] object-cover"
+alt="Cola de la Ballena">
+</div>
+</section>
+
+<section id="atracciones" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center text-emerald-700 mb-14">
+Principales Atracciones
+</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+<div class="bg-slate-50 rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition">
+<div class="text-5xl mb-5">🐋</div>
+<h3 class="text-2xl font-bold mb-4">Ballenas</h3>
+<p>Temporadas ideales para observar ballenas jorobadas y delfines.</p>
+</div>
+
+<div class="bg-slate-50 rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition">
+<div class="text-5xl mb-5">🏖️</div>
+<h3 class="text-2xl font-bold mb-4">Playas</h3>
+<p>Playa Uvita, Playa Ballena y Playa Piñuela ofrecen paisajes únicos.</p>
+</div>
+
+<div class="bg-slate-50 rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition">
+<div class="text-5xl mb-5">🥾</div>
+<h3 class="text-2xl font-bold mb-4">Senderos</h3>
+<p>Recorre bosques tropicales y observa fauna silvestre.</p>
+</div>
+
+<div class="bg-slate-50 rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition">
+<div class="text-5xl mb-5">🤿</div>
+<h3 class="text-2xl font-bold mb-4">Aventura</h3>
+<p>Snorkel, kayak, surf y tours en embarcación.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-emerald-600 text-white">
+<div class="max-w-6xl mx-auto px-6 text-center">
+<h2 class="text-5xl font-bold mb-8">La Cola de la Ballena</h2>
+<p class="text-xl max-w-4xl mx-auto leading-9">
+Vista desde el aire, esta formación rocosa y arenosa tiene la forma de la cola de una ballena.
+Es uno de los íconos naturales más fotografiados de Costa Rica.
+</p>
+
+<img src="images/cola-ballena.jpg"
+class="mt-12 rounded-3xl shadow-2xl mx-auto w-full max-w-5xl">
+
+<p class="mt-6 text-sm opacity-90">
+Coloca tu fotografía en:
+<strong>images/cola-ballena.jpg</strong>
+</p>
+</div>
+</section>
+
+<section class="py-20">
+<div class="max-w-6xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center text-emerald-700 mb-10">
+¿Por qué visitar Bahía Ballena?
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8 text-center">
+
+<div class="bg-white rounded-3xl shadow-lg p-8">
+<h3 class="text-5xl mb-4">🌿</h3>
+<h4 class="font-bold text-xl">Biodiversidad</h4>
+<p class="mt-4">Uno de los ecosistemas marinos más importantes del país.</p>
+</div>
+
+<div class="bg-white rounded-3xl shadow-lg p-8">
+<h3 class="text-5xl mb-4">🌅</h3>
+<h4 class="font-bold text-xl">Atardeceres</h4>
+<p class="mt-4">Disfruta de espectaculares puestas de sol frente al Pacífico.</p>
+</div>
+
+<div class="bg-white rounded-3xl shadow-lg p-8">
+<h3 class="text-5xl mb-4">❤️</h3>
+<h4 class="font-bold text-xl">Pura Vida</h4>
+<p class="mt-4">Hospitalidad, naturaleza y tranquilidad en un solo destino.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer id="contacto" class="bg-slate-900 text-gray-300 py-10">
+<div class="max-w-6xl mx-auto px-6 text-center">
+<h3 class="text-3xl font-bold text-white">Bahía Ballena</h3>
+<p class="mt-4">Parque Nacional Marino Ballena · Osa · Puntarenas · Costa Rica</p>
+<p class="mt-4 text-sm">
+Página creada con fines educativos.
+</p>
+</div>
+</footer>
+
+</body>
+</html>
