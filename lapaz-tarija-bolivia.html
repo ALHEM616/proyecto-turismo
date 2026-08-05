@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ruta del Vino - Tarija, Bolivia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 left-0 right-0 bg-stone-900/90 backdrop-blur-md text-white z-50 border-b border-amber-900/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold tracking-wide text-amber-500 flex items-center gap-2">
+                <i data-lucide="wine" class="w-7 h-7"></i> Ruta del Vino
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                <a href="#experiencia" class="hover:text-amber-400 transition">La Experiencia</a>
+                <a href="#bodegas" class="hover:text-amber-400 transition">Bodegas</a>
+                <a href="#gastronomia" class="hover:text-amber-400 transition">Gastronomía</a>
+            </div>
+            <a href="#reserva" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg shadow-amber-900/20">
+                Reservar Tour
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-16 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1920');">
+        <div class="max-w-4xl mx-auto text-center px-6 text-white py-12">
+            <span class="text-amber-400 font-semibold uppercase tracking-widest text-sm mb-4 inline-block">Descubre Tarija, Bolivia</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-6">
+                El Sabor de los Vinos de Altura
+            </h1>
+            <p class="text-lg md:text-xl text-stone-200 mb-8 max-w-2xl mx-auto font-light">
+                Recorre los viñedos más altos del mundo entre 1,700 y 2,400 msnm. Vive una tradición vitivinícola única rodeada de paisajes inolvidables y calidez tarijeña.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#reserva" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition shadow-lg">
+                    Planifica tu Visita
+                </a>
+                <a href="#experiencia" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/30 px-8 py-3.5 rounded-full font-semibold text-lg transition">
+                    Conocer Más
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Experiencia (Vinos de Altura) -->
+    <section id="experiencia" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-amber-700 font-bold uppercase text-xs tracking-widest">¿Por qué Tarija?</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mt-2">Una Experiencia Sensorial Única</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center hover:shadow-md transition">
+                <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="mountain" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold font-serif mb-3">Vinos de Altura</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    La radiación solar intensa de los Valles Centrales de Tarija genera uvas con mayor concentración de aromas, sabores y antioxidantes como el resveratrol.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center hover:shadow-md transition">
+                <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="glass-water" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold font-serif mb-3">Singani Tradicional</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Descubre el destilado insignia de Bolivia, producido exclusivamente a partir de la uva Moscatel de Alejandría con Denominación de Origen.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center hover:shadow-md transition">
+                <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="sun" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold font-serif mb-3">Clima Templado</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Disfruta del Valle de la Concepción, un microrregión paradisíaco con un clima agradable durante casi todo el año y paisajes pintorescos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion Bodegas -->
+    <section id="bodegas" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-amber-700 font-bold uppercase text-xs tracking-widest">Nuestra Ruta</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mt-2">Bodegas Destacadas</h2>
+                </div>
+                <p class="text-stone-600 max-w-md mt-4 md:mt-0 text-sm">
+                    Desde bodegas industriales galardonadas internacionalmente hasta bodegas artesanales y singanires con siglos de historia.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bodega 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1528823872057-9c018a7a7029?q=80&w=800" alt="Bodega Industrial" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Bodegas Industriales</h3>
+                        <p class="text-stone-600 text-sm mb-4">Tecnología de punta combinada con roble francés y americano para producir vinos premiados en todo el mundo.</p>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Catas & Tour Guiado</span>
+                    </div>
+                </div>
+
+                <!-- Bodega 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=800" alt="Bodega Artesanal" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Bodegas Artesanales</h3>
+                        <p class="text-stone-600 text-sm mb-4">Ubicadas principalmente en El Valle de la Concepción, preservan técnicas tradicionales y de producción familiar.</p>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Vinos patero & Historia</span>
+                    </div>
+                </div>
+
+                <!-- Bodega 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?q=80&w=800" alt="Casas Coloniales" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2">Casas Coloniales & Singani</h3>
+                        <p class="text-stone-600 text-sm mb-4">Visita haciendas con más de 400 años de antigüedad donde nació la destilación del Singani en la región.</p>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Degustación de Singani</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gastronomía & Cultura -->
+    <section id="gastronomia" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800" alt="Gastronomía de Tarija" class="rounded-2xl shadow-xl w-full object-cover h-[450px]">
+                <div class="absolute -bottom-6 -right-6 bg-amber-800 text-white p-6 rounded-2xl hidden sm:block max-w-xs shadow-lg">
+                    <p class="font-serif italic text-sm">"El maridaje perfecto entre la música de la caja, el erke y un buen vino chapaco."</p>
+                </div>
+            </div>
+            <div>
+                <span class="text-amber-700 font-bold uppercase text-xs tracking-widest">Sabores Locales</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mt-2 mb-6">Gastronomía y Tradición Chapaca</h2>
+                <p class="text-stone-600 leading-relaxed mb-6">
+                    La experiencia del vino en Tarija no está completa sin su comida tradicional. Disfruta del famoso <strong>Saice Tarijeño</strong>, el chancho a la cruz, o los quesos criollos acompañados de pan casero al horno de barro.
+                </p>
+                <ul class="space-y-3 font-medium text-stone-700">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="check-circle-2" class="text-amber-600 w-5 h-5"></i> Maridajes con platos criollos en viñedos.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="check-circle-2" class="text-amber-600 w-5 h-5"></i> Presentaciones de danza y música en vivo (cuecas y tonadas).
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="check-circle-2" class="text-amber-600 w-5 h-5"></i> Rutas guiadas por sommeliers locales.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario / Reserva -->
+    <section id="reserva" class="py-20 bg-stone-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold">Reserva tu Tour por la Ruta del Vino</h2>
+                <p class="text-stone-400 mt-2">Déjanos tus datos y un guía especializado se pondrá en contacto contigo.</p>
+            </div>
+
+            <form class="bg-stone-800/60 backdrop-blur p-8 rounded-2xl border border-stone-700 space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-stone-300 mb-2">Nombre Completo</label>
+                        <input type="text" placeholder="Ej. Juan Pérez" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-stone-300 mb-2">Correo Electrónico</label>
+                        <input type="email" placeholder="correo@ejemplo.com" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-stone-300 mb-2">Fecha Estimada</label>
+                        <input type="date" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-stone-300 mb-2">Número de Personas</label>
+                        <select class="w-full bg-stone-900 border border-stone-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500">
+                            <option>1 - 2 Personas</option>
+                            <option>3 - 5 Personas</option>
+                            <option>Grupo (6+ Personas)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-stone-300 mb-2">Comentarios o Preferencias</label>
+                    <textarea rows="3" placeholder="¿Te interesa alguna bodega en particular o tour privado?" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-lg transition shadow-lg text-center">
+                    Solicitar Información y Disponibilidad
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-amber-500 font-serif font-bold text-xl">
+                <i data-lucide="wine" class="w-6 h-6"></i> Ruta del Vino Tarija
+            </div>
+            <p class="text-sm text-center">© 2026 La Ruta del Vino y el Singani - Tarija, Bolivia. Todos los derechos reservados.</p>
+            <div class="flex space-x-6 text-stone-400">
+                <a href="#" class="hover:text-amber-500 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-amber-500 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-amber-500 transition"><i data-lucide="map-pin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inicialización de Iconos Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

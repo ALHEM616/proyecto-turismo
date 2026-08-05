@@ -1,3 +1,12 @@
 # Proyecto turistico
+## Integrantes:
 
--Ricardo Ventura
+
+##  eso es una prueba
+``
+	INTEGRANTES
+``
+- Moises Mojica
+- Nilo Centellas
+- César Alca
+- Ricardo Ventura
