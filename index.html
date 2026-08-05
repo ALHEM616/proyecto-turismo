@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illimani Travel - Agencia de Turismo en La Paz, Bolivia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navegación -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-2xl font-bold text-slate-900">
+                <i class="fa-solid fa-mountain text-amber-500"></i>
+                <span>Illimani<span class="text-amber-500">Tours</span></span>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#inicio" class="hover:text-amber-500 transition">Inicio</a>
+                <a href="#destinos" class="hover:text-amber-500 transition">Atractivos</a>
+                <a href="#paquetes" class="hover:text-amber-500 transition">Tours</a>
+                <a href="#contacto" class="hover:text-amber-500 transition">Contacto</a>
+            </div>
+            <a href="#contacto" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-md transition transform hover:-translate-y-0.5">
+                Reservar Ahora
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-slate-900 text-white min-h-screen flex items-center pt-16">
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center md:text-left py-20">
+            <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase">
+                Descubre Bolivia a 3,600 metros de altura
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-6 mb-6 leading-tight max-w-3xl">
+                Explora la Magia de <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">La Paz</span> y sus Maravillas
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl font-light">
+                Desde las alturas del teleférico urbano más alto del mundo hasta la mística del Valle de la Luna y las majestuosas cumbres del Illimani.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#paquetes" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-lg transition">
+                    Ver Paquetes
+                </a>
+                <a href="#destinos" class="border border-white/30 hover:bg-white/10 text-white font-semibold px-8 py-3.5 rounded-xl transition">
+                    Explorar Destinos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atractivos Principales -->
+    <section id="destinos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Atractivos Imperdibles en La Paz</h2>
+                <p class="text-slate-600">Sumérgete en la cultura, historia y paisajes únicos que solo la sede de gobierno de Bolivia te puede ofrecer.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" alt="Teleferico La Paz" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">Icono Urbano</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mi Teleférico</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            La red de transporte por cable más alta y extensa del planeta. Disfruta de vistas panorámicas deslumbrantes de la hoyada paceña y la cordillera.
+                        </p>
+                        <span class="text-amber-600 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+                            Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="Valle de la Luna" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">Naturaleza</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Valle de la Luna</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Un laberinto de estalagmitas y formaciones arcillosas esculpidas por la erosión milenaria. Un paisaje lunar a pocos minutos de la ciudad.
+                        </p>
+                        <span class="text-amber-600 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+                            Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=800&auto=format&fit=crop" alt="Mercado de las Brujas" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">Cultura Viva</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mercado de las Brujas</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            En el centro histórico. Descubre hierbas medicinales, amuletos andinos, artesanías de lana de alpaca y secretos de la cosmovisión aymara.
+                        </p>
+                        <span class="text-amber-600 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+                            Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paquetes de Tours -->
+    <section id="paquetes" class="py-20 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-amber-600 font-bold text-sm tracking-widest uppercase">Nuestras Experiencias</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-2">Tours Destacados</h2>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tour 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">Half Day</span>
+                            <span class="text-lg font-extrabold text-slate-900">$45 USD</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">City Tour & Mi Teleférico</h3>
+                        <p class="text-slate-600 text-sm mb-4">Recorrido por la Plaza Murillo, Calle Jaén, Mercado de las Brujas y 3 líneas del teleférico.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Guía bilingüe certificado</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Boletos de teleférico incluidos</li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-slate-900 hover:bg-amber-500 text-white font-semibold py-2.5 rounded-lg transition">Reservar Tour</button>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between border-2 border-amber-500 relative">
+                    <span class="absolute -top-3 right-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Más Popular</span>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">Full Day</span>
+                            <span class="text-lg font-extrabold text-slate-900">$75 USD</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Camino de la Muerte (Coroico)</h3>
+                        <p class="text-slate-600 text-sm mb-4">Aventura extrema en bicicleta descendiendo desde los Andes helados hasta la selva de Yungas.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Equipo de protección profesional</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Almuerzo buffet y transporte</li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2.5 rounded-lg transition">Reservar Tour</button>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">2 Días / 1 Noche</span>
+                            <span class="text-lg font-extrabold text-slate-900">$130 USD</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Lago Titicaca & Copacabana</h3>
+                        <p class="text-slate-600 text-sm mb-4">Visita el lago navegable más alto del mundo, la Isla del Sol y sus sitios arqueológicos incas.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Transporte privado desde La Paz</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Hospedaje y paseos en lancha</li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-slate-900 hover:bg-amber-500 text-white font-semibold py-2.5 rounded-lg transition">Reservar Tour</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Planifica tu viaje a La Paz</h2>
+                        <p class="text-slate-300 text-sm mb-6">Déjanos tus datos y un asesor especializado armará tu itinerario a medida.</p>
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <p><i class="fa-solid fa-location-dot text-amber-400 mr-3"></i> Av. 16 de Julio (El Prado), La Paz - Bolivia</p>
+                            <p><i class="fa-solid fa-phone text-amber-400 mr-3"></i> +591 2 2345678</p>
+                            <p><i class="fa-solid fa-envelope text-amber-400 mr-3"></i> info@illimanitours.bo</p>
+                        </div>
+                    </div>
+                    <form class="space-y-4 bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
+                        <div>
+                            <input type="text" placeholder="Nombre completo" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-amber-500 text-white text-sm">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-amber-500 text-white text-sm">
+                        </div>
+                        <div>
+                            <textarea placeholder="¿Qué lugares deseas visitar?" rows="3" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-amber-500 text-white text-sm"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 rounded-lg transition">Enviar Consulta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <a href="#" class="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-mountain text-amber-500"></i> IllimaniTours
+                </a>
+                <p class="text-xs mt-2">Agencia de Turismo Autorizada en La Paz, Bolivia.</p>
+            </div>
+            <div class="flex space-x-6 text-lg">
+                <a href="#" class="hover:text-amber-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-amber-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p class="text-xs">&copy; 2026 IllimaniTours Bolivia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
