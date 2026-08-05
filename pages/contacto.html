@@ -1,3 +1,4 @@
+<!-- pages/contacto.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +9,17 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Tihuanacu | Contacto</title>
+  <meta
+    name="description"
+    content="Contacta con Turismo Tihuanacu para solicitar información sobre transporte, recorridos, visitas grupales y recomendaciones."
+  >
+
+  <meta
+    name="keywords"
+    content="contacto Tihuanacu, turismo Tiwanaku, visitas, recorridos, transporte, Bolivia"
+  >
+
+  <title>Contacto | Turismo Tihuanacu</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,31 +30,174 @@
   >
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../js/tailwind-config.js"></script>
 
-  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tierra: {
+              50: "#fff8f1",
+              100: "#fcebd9",
+              200: "#f8d4b4",
+              300: "#f2b584",
+              400: "#e98b50",
+              500: "#d96b2b",
+              600: "#bb4e20",
+              700: "#963b1d",
+              800: "#79321e",
+              900: "#632b1c"
+            },
+            piedra: {
+              50: "#f7f6f3",
+              100: "#ebe8e1",
+              200: "#d8d1c5",
+              300: "#bdb3a3",
+              400: "#a49784",
+              500: "#8a7b68",
+              600: "#706354",
+              700: "#5c5146",
+              800: "#4d443c",
+              900: "#423b35"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Cinzel", "serif"]
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(66, 59, 53, 0.16)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fffaf5;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(32, 24, 18, 0.96) 0%,
+          rgba(32, 24, 18, 0.78) 48%,
+          rgba(32, 24, 18, 0.32) 100%
+        );
+    }
+
+    .pattern-background {
+      background-image:
+        radial-gradient(
+          circle at 1px 1px,
+          rgba(150, 59, 29, 0.15) 1px,
+          transparent 0
+        );
+      background-size: 24px 24px;
+    }
+
+    .image-fallback {
+      background-color: #8a7b68;
+    }
+
+    .contact-card {
+      transition:
+        transform 250ms ease,
+        box-shadow 250ms ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(66, 59, 53, 0.16);
+    }
+
+    .field-error {
+      border-color: #b91c1c;
+      box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+    }
+  </style>
 </head>
 
 <body class="font-sans text-piedra-900 antialiased">
 
-  <header class="sticky top-0 z-50 bg-piedra-900 text-white shadow-lg">
+  <!-- Encabezado -->
+  <header
+    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-piedra-900/95 text-white shadow-lg backdrop-blur-md"
+  >
     <nav
       class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      aria-label="Navegación principal"
     >
-      <a href="../index.html" class="font-display text-xl font-bold">
-        Tihuanacu
+      <a
+        href="../lapaz-tihuanacu-bolivia.html"
+        class="flex items-center gap-3"
+        aria-label="Ir a la página de inicio"
+      >
+        <span
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-tierra-700 font-display text-lg font-bold shadow-md"
+        >
+          T
+        </span>
+
+        <span>
+          <span class="block font-display text-lg font-bold leading-none">
+            Tihuanacu
+          </span>
+
+          <span
+            class="mt-1 block text-xs uppercase tracking-[0.25em] text-tierra-200"
+          >
+            Bolivia
+          </span>
+        </span>
       </a>
 
       <div class="hidden items-center gap-7 lg:flex">
-        <a href="../index.html">Inicio</a>
-        <a href="historia.html">Historia</a>
-        <a href="atractivos.html">Atractivos</a>
-        <a href="visita.html">Visita</a>
-        <a href="galeria.html">Galería</a>
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="historia.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Historia
+        </a>
+
+        <a
+          href="atractivos.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Atractivos
+        </a>
+
+        <a
+          href="visita.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Visita
+        </a>
+
+        <a
+          href="galeria.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Galería
+        </a>
 
         <a
           href="contacto.html"
-          class="rounded-full bg-tierra-600 px-5 py-2.5 text-white"
+          class="border-b-2 border-tierra-300 pb-1 text-sm font-semibold text-tierra-300"
+          aria-current="page"
         >
           Contacto
         </a>
@@ -51,148 +205,1202 @@
 
       <button
         id="menu-button"
-        class="flex h-11 w-11 items-center justify-center border border-white/20 lg:hidden"
+        type="button"
+        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-tierra-300 lg:hidden"
+        aria-label="Abrir menú"
         aria-expanded="false"
+        aria-controls="mobile-menu"
       >
-        <span id="menu-open-icon">☰</span>
-        <span id="menu-close-icon" class="hidden">×</span>
+        <svg
+          id="menu-open-icon"
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <svg
+          id="menu-close-icon"
+          class="hidden h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden px-4 py-5 lg:hidden">
-      <div class="flex flex-col gap-3">
-        <a class="mobile-link" href="../index.html">Inicio</a>
-        <a class="mobile-link" href="historia.html">Historia</a>
-        <a class="mobile-link" href="atractivos.html">Atractivos</a>
-        <a class="mobile-link" href="visita.html">Visita</a>
-        <a class="mobile-link" href="galeria.html">Galería</a>
-        <a class="mobile-link text-tierra-300" href="contacto.html">
+    <!-- Menú móvil -->
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-white/10 bg-piedra-900 px-4 py-5 lg:hidden"
+    >
+      <div class="mx-auto flex max-w-7xl flex-col gap-2">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="historia.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Historia
+        </a>
+
+        <a
+          href="atractivos.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Atractivos
+        </a>
+
+        <a
+          href="visita.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Visita
+        </a>
+
+        <a
+          href="galeria.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="mobile-link rounded-lg bg-white/10 px-4 py-3 font-semibold text-tierra-300"
+          aria-current="page"
+        >
           Contacto
         </a>
       </div>
     </div>
   </header>
 
-  <main class="bg-tierra-700 py-24 text-white">
+  <main>
+
+    <!-- Portada -->
     <section
-      class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      class="relative min-h-screen overflow-hidden bg-piedra-900"
+      aria-labelledby="contacto-title"
     >
-      <div>
-        <p
-          class="font-bold uppercase tracking-[0.25em] text-tierra-200"
-        >
-          Escríbenos
-        </p>
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiwanaku_-_Kalasasaya%2C_Templo_do_Sol.jpg"
+        alt="Templo de Kalasasaya en Tihuanacu"
+        class="image-fallback absolute inset-0 h-full w-full object-cover"
+      >
 
-        <h1 class="mt-4 font-display text-5xl font-bold sm:text-6xl">
-          Planifica tu experiencia
-        </h1>
+      <div class="hero-overlay absolute inset-0"></div>
 
-        <p class="mt-6 text-lg leading-8 text-tierra-100">
-          Envíanos tus consultas sobre transporte, recorridos y visitas
-          grupales.
-        </p>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-piedra-900/90 via-transparent to-piedra-900/20"
+      ></div>
 
-        <div class="mt-10 space-y-4">
-          <p>
-            <strong>Correo:</strong>
-            turismo@tihuanacu.bo
+      <div
+        class="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 pb-20 pt-36 sm:px-6 lg:px-8"
+      >
+        <div class="max-w-3xl text-white">
+          <span
+            class="inline-flex items-center gap-3 rounded-full border border-tierra-300/40 bg-black/30 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-tierra-200 backdrop-blur-sm"
+          >
+            <span class="h-2 w-2 rounded-full bg-tierra-300"></span>
+            Estamos para ayudarte
+          </span>
+
+          <h1
+            id="contacto-title"
+            class="mt-7 font-display text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl"
+          >
+            Contacta con
+            <span class="text-tierra-300">Tihuanacu</span>
+          </h1>
+
+          <p
+            class="mt-7 max-w-2xl text-lg leading-8 text-piedra-100 sm:text-xl"
+          >
+            Envíanos tus consultas sobre transporte, recorridos, visitas
+            grupales y recomendaciones para organizar tu experiencia.
           </p>
 
-          <p>
-            <strong>Teléfono:</strong>
-            +591 700 000 00
-          </p>
+          <a
+            href="#formulario"
+            class="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-tierra-600 px-7 py-3.5 font-semibold shadow-lg transition hover:-translate-y-0.5 hover:bg-tierra-500"
+          >
+            Enviar una consulta
+
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"
+              />
+            </svg>
+          </a>
         </div>
       </div>
+    </section>
 
-      <form
-        id="contact-form"
-        class="rounded-3xl bg-white p-8 text-piedra-900 shadow-2xl"
+    <!-- Datos de contacto -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28"
+      aria-labelledby="informacion-contacto-title"
+    >
+      <div class="pattern-background absolute inset-0 opacity-40"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Información
+          </p>
+
+          <h2
+            id="informacion-contacto-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
+          >
+            Canales de atención
+          </h2>
+
+          <p class="mt-5 text-lg leading-8 text-piedra-600">
+            Utiliza el canal que prefieras para realizar tus consultas.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+          <article
+            class="contact-card rounded-3xl border border-piedra-200 bg-white p-8 text-center"
+          >
+            <span
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-100 text-tierra-700"
+            >
+              <svg
+                class="h-7 w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5h18v14H3V5Zm0 1 9 7 9-7"
+                />
+              </svg>
+            </span>
+
+            <h3 class="mt-6 font-display text-xl font-bold">
+              Correo electrónico
+            </h3>
+
+            <a
+              href="mailto:turismo@tihuanacu.bo"
+              class="mt-3 block break-all text-sm font-semibold text-tierra-700 hover:underline"
+            >
+              turismo@tihuanacu.bo
+            </a>
+          </article>
+
+          <article
+            class="contact-card rounded-3xl border border-piedra-200 bg-white p-8 text-center"
+          >
+            <span
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-100 text-tierra-700"
+            >
+              <svg
+                class="h-7 w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 0 1 2-2h3l2 5-2 1a16 16 0 0 0 7 7l1-2 5 2v3a2 2 0 0 1-2 2h-1C10 21 3 14 3 6V5Z"
+                />
+              </svg>
+            </span>
+
+            <h3 class="mt-6 font-display text-xl font-bold">
+              Teléfono
+            </h3>
+
+            <a
+              href="tel:+59170000000"
+              class="mt-3 block text-sm font-semibold text-tierra-700 hover:underline"
+            >
+              +591 700 000 00
+            </a>
+          </article>
+
+          <article
+            class="contact-card rounded-3xl border border-piedra-200 bg-white p-8 text-center"
+          >
+            <span
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-100 text-tierra-700"
+            >
+              <svg
+                class="h-7 w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                />
+              </svg>
+            </span>
+
+            <h3 class="mt-6 font-display text-xl font-bold">
+              Ubicación
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-piedra-600">
+              Tihuanacu, departamento de La Paz, Bolivia
+            </p>
+          </article>
+
+          <article
+            class="contact-card rounded-3xl border border-piedra-200 bg-white p-8 text-center"
+          >
+            <span
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-100 text-tierra-700"
+            >
+              <svg
+                class="h-7 w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 7v5l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </span>
+
+            <h3 class="mt-6 font-display text-xl font-bold">
+              Atención
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-piedra-600">
+              Lunes a viernes<br>
+              08:00 a 17:00
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario -->
+    <section
+      id="formulario"
+      class="bg-tierra-50 py-24 sm:py-28"
+      aria-labelledby="formulario-title"
+    >
+      <div
+        class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
       >
         <div>
-          <label for="name" class="mb-2 block font-semibold">
-            Nombre
-          </label>
-
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            autocomplete="name"
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
           >
-        </div>
+            Formulario de contacto
+          </p>
 
-        <div class="mt-6">
-          <label for="email" class="mb-2 block font-semibold">
-            Correo electrónico
-          </label>
-
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            autocomplete="email"
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+          <h2
+            id="formulario-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
           >
-        </div>
+            Cuéntanos cómo podemos ayudarte
+          </h2>
 
-        <div class="mt-6">
-          <label for="subject" class="mb-2 block font-semibold">
-            Motivo
-          </label>
+          <p class="mt-6 text-lg leading-8 text-piedra-600">
+            Completa el formulario y recibirás una respuesta mediante el correo
+            electrónico registrado.
+          </p>
 
-          <select
-            id="subject"
-            name="subject"
-            required
-            class="w-full rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600"
+          <div class="mt-10 space-y-6">
+            <article class="flex gap-5">
+              <span
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-tierra-700 font-bold text-white"
+              >
+                1
+              </span>
+
+              <div>
+                <h3 class="font-display text-xl font-bold">
+                  Escribe tus datos
+                </h3>
+
+                <p class="mt-2 leading-7 text-piedra-600">
+                  Utiliza un correo electrónico al que tengas acceso.
+                </p>
+              </div>
+            </article>
+
+            <article class="flex gap-5">
+              <span
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-tierra-700 font-bold text-white"
+              >
+                2
+              </span>
+
+              <div>
+                <h3 class="font-display text-xl font-bold">
+                  Selecciona el motivo
+                </h3>
+
+                <p class="mt-2 leading-7 text-piedra-600">
+                  Esto permitirá organizar mejor tu solicitud.
+                </p>
+              </div>
+            </article>
+
+            <article class="flex gap-5">
+              <span
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-tierra-700 font-bold text-white"
+              >
+                3
+              </span>
+
+              <div>
+                <h3 class="font-display text-xl font-bold">
+                  Describe tu consulta
+                </h3>
+
+                <p class="mt-2 leading-7 text-piedra-600">
+                  Incluye fechas, cantidad de personas o detalles relevantes.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="mt-10 overflow-hidden rounded-[2rem] shadow-soft"
           >
-            <option value="">Selecciona una opción</option>
-            <option value="informacion">Información general</option>
-            <option value="transporte">Transporte</option>
-            <option value="recorrido">Recorridos</option>
-            <option value="grupo">Visita grupal</option>
-          </select>
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puerta_y_escalinata_del_templo_Kalasasaya_Tiwanaku_Bolivia.jpg"
+              alt="Puerta y escalinata del templo de Kalasasaya"
+              class="image-fallback h-[360px] w-full object-cover"
+              loading="lazy"
+            >
+          </div>
         </div>
 
-        <div class="mt-6">
-          <label for="message" class="mb-2 block font-semibold">
-            Mensaje
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            class="w-full resize-none rounded-xl border border-piedra-300 px-4 py-3 outline-none focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="mt-7 w-full rounded-xl bg-piedra-900 px-6 py-3.5 font-bold text-white transition hover:bg-tierra-700"
+        <form
+          id="contact-form"
+          class="rounded-[2rem] bg-white p-7 shadow-soft sm:p-10"
+          novalidate
         >
-          Enviar consulta
-        </button>
+          <div
+            id="form-success"
+            class="mb-7 hidden rounded-2xl border border-green-200 bg-green-50 p-5 text-green-800"
+            role="status"
+            aria-live="polite"
+          >
+            <p class="font-bold">
+              Consulta registrada correctamente
+            </p>
 
-        <p
-          id="form-message"
-          class="mt-4 hidden rounded-xl bg-green-50 px-4 py-3 font-semibold text-green-800"
-          role="status"
-        ></p>
-      </form>
+            <p class="mt-1 text-sm">
+              Gracias por escribirnos. Hemos recibido tu mensaje.
+            </p>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label
+                for="name"
+                class="mb-2 block text-sm font-semibold"
+              >
+                Nombre completo
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Ejemplo: Ana Pérez"
+                class="w-full rounded-xl border border-piedra-300 bg-white px-4 py-3 outline-none transition placeholder:text-piedra-400 focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+                aria-describedby="name-error"
+              >
+
+              <p
+                id="name-error"
+                class="mt-2 hidden text-sm font-medium text-red-700"
+              ></p>
+            </div>
+
+            <div>
+              <label
+                for="email"
+                class="mb-2 block text-sm font-semibold"
+              >
+                Correo electrónico
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="correo@ejemplo.com"
+                class="w-full rounded-xl border border-piedra-300 bg-white px-4 py-3 outline-none transition placeholder:text-piedra-400 focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+                aria-describedby="email-error"
+              >
+
+              <p
+                id="email-error"
+                class="mt-2 hidden text-sm font-medium text-red-700"
+              ></p>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label
+              for="phone"
+              class="mb-2 block text-sm font-semibold"
+            >
+              Teléfono
+              <span class="font-normal text-piedra-500">
+                (opcional)
+              </span>
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="+591 700 000 00"
+              class="w-full rounded-xl border border-piedra-300 bg-white px-4 py-3 outline-none transition placeholder:text-piedra-400 focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+            >
+          </div>
+
+          <div class="mt-6">
+            <label
+              for="subject"
+              class="mb-2 block text-sm font-semibold"
+            >
+              Motivo de consulta
+            </label>
+
+            <select
+              id="subject"
+              name="subject"
+              class="w-full rounded-xl border border-piedra-300 bg-white px-4 py-3 outline-none transition focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+              aria-describedby="subject-error"
+            >
+              <option value="">
+                Selecciona una opción
+              </option>
+
+              <option value="informacion">
+                Información general
+              </option>
+
+              <option value="transporte">
+                Transporte
+              </option>
+
+              <option value="recorrido">
+                Recorrido turístico
+              </option>
+
+              <option value="grupo">
+                Visita grupal
+              </option>
+
+              <option value="educativa">
+                Visita educativa
+              </option>
+
+              <option value="otro">
+                Otro motivo
+              </option>
+            </select>
+
+            <p
+              id="subject-error"
+              class="mt-2 hidden text-sm font-medium text-red-700"
+            ></p>
+          </div>
+
+          <div class="mt-6">
+            <label
+              for="visit-date"
+              class="mb-2 block text-sm font-semibold"
+            >
+              Fecha aproximada de visita
+              <span class="font-normal text-piedra-500">
+                (opcional)
+              </span>
+            </label>
+
+            <input
+              id="visit-date"
+              name="visit-date"
+              type="date"
+              class="w-full rounded-xl border border-piedra-300 bg-white px-4 py-3 outline-none transition focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+            >
+          </div>
+
+          <div class="mt-6">
+            <label
+              for="message"
+              class="mb-2 block text-sm font-semibold"
+            >
+              Mensaje
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              maxlength="700"
+              placeholder="Describe tu consulta..."
+              class="w-full resize-none rounded-xl border border-piedra-300 bg-white px-4 py-3 outline-none transition placeholder:text-piedra-400 focus:border-tierra-600 focus:ring-4 focus:ring-tierra-100"
+              aria-describedby="message-error message-counter"
+            ></textarea>
+
+            <div class="mt-2 flex items-start justify-between gap-4">
+              <p
+                id="message-error"
+                class="hidden text-sm font-medium text-red-700"
+              ></p>
+
+              <p
+                id="message-counter"
+                class="ml-auto text-sm text-piedra-500"
+              >
+                0 / 700
+              </p>
+            </div>
+          </div>
+
+          <label
+            class="mt-6 flex cursor-pointer items-start gap-3 rounded-2xl bg-tierra-50 p-4"
+          >
+            <input
+              id="privacy"
+              name="privacy"
+              type="checkbox"
+              class="mt-1 h-5 w-5 rounded border-piedra-300 text-tierra-700 focus:ring-tierra-600"
+              aria-describedby="privacy-error"
+            >
+
+            <span class="text-sm leading-6 text-piedra-600">
+              Acepto que mis datos sean utilizados para responder esta
+              consulta.
+            </span>
+          </label>
+
+          <p
+            id="privacy-error"
+            class="mt-2 hidden text-sm font-medium text-red-700"
+          ></p>
+
+          <button
+            id="submit-button"
+            type="submit"
+            class="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-piedra-900 px-6 py-3.5 font-bold text-white transition hover:bg-tierra-700 focus:outline-none focus:ring-4 focus:ring-tierra-200 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            <svg
+              id="submit-icon"
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m3 3 18 9-18 9 4-9-4-9Zm4 9h14"
+              />
+            </svg>
+
+            <svg
+              id="loading-icon"
+              class="hidden h-5 w-5 animate-spin"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 0 1 8-8v4a4 4 0 0 0-4 4H4Z"
+              ></path>
+            </svg>
+
+            <span id="submit-text">
+              Enviar consulta
+            </span>
+          </button>
+        </form>
+      </div>
     </section>
+
+    <!-- Preguntas frecuentes -->
+    <section
+      class="bg-piedra-900 py-24 text-white sm:py-28"
+      aria-labelledby="faq-title"
+    >
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-300"
+          >
+            Ayuda
+          </p>
+
+          <h2
+            id="faq-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
+          >
+            Preguntas frecuentes
+          </h2>
+        </div>
+
+        <div class="mt-14 space-y-4">
+
+          <article
+            class="overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+          >
+            <button
+              type="button"
+              class="faq-button flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+              aria-expanded="false"
+            >
+              <span class="font-display text-lg font-bold">
+                ¿Puedo organizar una visita grupal?
+              </span>
+
+              <span class="faq-icon text-2xl text-tierra-300">
+                +
+              </span>
+            </button>
+
+            <div class="faq-content hidden px-6 pb-6 text-piedra-300">
+              Sí. Indica la cantidad de personas, la fecha aproximada y el tipo
+              de grupo en el formulario de contacto.
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+          >
+            <button
+              type="button"
+              class="faq-button flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+              aria-expanded="false"
+            >
+              <span class="font-display text-lg font-bold">
+                ¿Puedo consultar sobre transporte?
+              </span>
+
+              <span class="faq-icon text-2xl text-tierra-300">
+                +
+              </span>
+            </button>
+
+            <div class="faq-content hidden px-6 pb-6 text-piedra-300">
+              Sí. Selecciona la opción Transporte e incluye tu punto de partida
+              para recibir una respuesta más precisa.
+            </div>
+          </article>
+
+          <article
+            class="overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+          >
+            <button
+              type="button"
+              class="faq-button flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+              aria-expanded="false"
+            >
+              <span class="font-display text-lg font-bold">
+                ¿El formulario envía correos reales?
+              </span>
+
+              <span class="faq-icon text-2xl text-tierra-300">
+                +
+              </span>
+            </button>
+
+            <div class="faq-content hidden px-6 pb-6 text-piedra-300">
+              Esta versión demuestra la validación y confirmación del
+              formulario. Para enviar correos reales debe conectarse con un
+              servidor o servicio de formularios.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="bg-piedra-900 py-10 text-center text-white">
-    © <span class="current-year"></span> Turismo Tihuanacu.
+  <!-- Pie de página -->
+  <footer class="bg-piedra-900 text-white">
+    <div
+      class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8"
+    >
+      <div class="lg:col-span-2">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="inline-flex items-center gap-3"
+        >
+          <span
+            class="flex h-11 w-11 items-center justify-center rounded-full bg-tierra-700 font-display text-lg font-bold"
+          >
+            T
+          </span>
+
+          <span class="font-display text-xl font-bold">
+            Tihuanacu
+          </span>
+        </a>
+
+        <p class="mt-5 max-w-lg leading-7 text-piedra-300">
+          Una plataforma dedicada a difundir la historia, cultura y patrimonio
+          turístico de Tihuanacu.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-bold">
+          Navegación
+        </h2>
+
+        <ul class="mt-5 space-y-3 text-piedra-300">
+          <li>
+            <a href="../lapaz-tihuanacu-bolivia.html" class="transition hover:text-tierra-300">
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a href="historia.html" class="transition hover:text-tierra-300">
+              Historia
+            </a>
+          </li>
+
+          <li>
+            <a href="atractivos.html" class="transition hover:text-tierra-300">
+              Atractivos
+            </a>
+          </li>
+
+          <li>
+            <a href="galeria.html" class="transition hover:text-tierra-300">
+              Galería
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-bold">
+          Información
+        </h2>
+
+        <ul class="mt-5 space-y-3 text-piedra-300">
+          <li>
+            <a href="visita.html" class="transition hover:text-tierra-300">
+              Planificar visita
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Tiwanaku+Bolivia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition hover:text-tierra-300"
+            >
+              Ubicación
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://commons.wikimedia.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition hover:text-tierra-300"
+            >
+              Créditos fotográficos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-center text-sm text-piedra-400 sm:px-6 md:flex-row md:items-center md:justify-between md:text-left lg:px-8"
+      >
+        <p>
+          © <span id="current-year"></span> Turismo Tihuanacu.
+        </p>
+
+        <p>
+          Fotografías proporcionadas mediante Wikimedia Commons.
+        </p>
+      </div>
+    </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <!-- Botón para volver arriba -->
+  <button
+    id="scroll-top-button"
+    type="button"
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-tierra-700 text-white shadow-xl transition hover:-translate-y-1 hover:bg-tierra-800 focus:outline-none focus:ring-4 focus:ring-tierra-200"
+    aria-label="Volver al inicio"
+  >
+    <svg
+      class="h-6 w-6"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m5 15 7-7 7 7"
+      />
+    </svg>
+  </button>
+
+  <script>
+    "use strict";
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuOpenIcon = document.getElementById("menu-open-icon");
+    const menuCloseIcon = document.getElementById("menu-close-icon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+    const currentYear = document.getElementById("current-year");
+    const scrollTopButton = document.getElementById("scroll-top-button");
+
+    const contactForm = document.getElementById("contact-form");
+    const formSuccess = document.getElementById("form-success");
+    const submitButton = document.getElementById("submit-button");
+    const submitText = document.getElementById("submit-text");
+    const submitIcon = document.getElementById("submit-icon");
+    const loadingIcon = document.getElementById("loading-icon");
+
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const subjectInput = document.getElementById("subject");
+    const messageInput = document.getElementById("message");
+    const privacyInput = document.getElementById("privacy");
+    const messageCounter = document.getElementById("message-counter");
+
+    const faqButtons = document.querySelectorAll(".faq-button");
+
+    function setMobileMenuState(isOpen) {
+      mobileMenu.classList.toggle("hidden", !isOpen);
+      menuOpenIcon.classList.toggle("hidden", isOpen);
+      menuCloseIcon.classList.toggle("hidden", !isOpen);
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Cerrar menú" : "Abrir menú"
+      );
+    }
+
+    function updateScrollButton() {
+      const shouldShowButton = window.scrollY > 500;
+
+      scrollTopButton.classList.toggle("hidden", !shouldShowButton);
+      scrollTopButton.classList.toggle("flex", shouldShowButton);
+    }
+
+    function showFieldError(input, errorId, message) {
+      const errorElement = document.getElementById(errorId);
+
+      input.classList.add("field-error");
+      input.setAttribute("aria-invalid", "true");
+
+      errorElement.textContent = message;
+      errorElement.classList.remove("hidden");
+    }
+
+    function clearFieldError(input, errorId) {
+      const errorElement = document.getElementById(errorId);
+
+      input.classList.remove("field-error");
+      input.removeAttribute("aria-invalid");
+
+      errorElement.textContent = "";
+      errorElement.classList.add("hidden");
+    }
+
+    function isValidEmail(email) {
+      const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      return emailPattern.test(email);
+    }
+
+    function validateForm() {
+      let isValid = true;
+
+      clearFieldError(nameInput, "name-error");
+      clearFieldError(emailInput, "email-error");
+      clearFieldError(subjectInput, "subject-error");
+      clearFieldError(messageInput, "message-error");
+
+      const privacyError =
+        document.getElementById("privacy-error");
+
+      privacyError.textContent = "";
+      privacyError.classList.add("hidden");
+
+      if (nameInput.value.trim().length < 3) {
+        showFieldError(
+          nameInput,
+          "name-error",
+          "Escribe un nombre de al menos 3 caracteres."
+        );
+
+        isValid = false;
+      }
+
+      if (!isValidEmail(emailInput.value.trim())) {
+        showFieldError(
+          emailInput,
+          "email-error",
+          "Escribe un correo electrónico válido."
+        );
+
+        isValid = false;
+      }
+
+      if (!subjectInput.value) {
+        showFieldError(
+          subjectInput,
+          "subject-error",
+          "Selecciona un motivo de consulta."
+        );
+
+        isValid = false;
+      }
+
+      if (messageInput.value.trim().length < 10) {
+        showFieldError(
+          messageInput,
+          "message-error",
+          "El mensaje debe tener al menos 10 caracteres."
+        );
+
+        isValid = false;
+      }
+
+      if (!privacyInput.checked) {
+        privacyError.textContent =
+          "Debes aceptar el uso de tus datos para continuar.";
+
+        privacyError.classList.remove("hidden");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    function setSubmittingState(isSubmitting) {
+      submitButton.disabled = isSubmitting;
+      submitText.textContent =
+        isSubmitting ? "Enviando..." : "Enviar consulta";
+
+      submitIcon.classList.toggle("hidden", isSubmitting);
+      loadingIcon.classList.toggle("hidden", !isSubmitting);
+    }
+
+    function resetFormState() {
+      contactForm.reset();
+
+      messageCounter.textContent = "0 / 700";
+
+      clearFieldError(nameInput, "name-error");
+      clearFieldError(emailInput, "email-error");
+      clearFieldError(subjectInput, "subject-error");
+      clearFieldError(messageInput, "message-error");
+
+      const privacyError =
+        document.getElementById("privacy-error");
+
+      privacyError.classList.add("hidden");
+      privacyError.textContent = "";
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      setMobileMenuState(!isOpen);
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        setMobileMenuState(false);
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuState(false);
+      }
+    });
+
+    window.addEventListener("scroll", updateScrollButton);
+
+    scrollTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    messageInput.addEventListener("input", () => {
+      messageCounter.textContent =
+        `${messageInput.value.length} / 700`;
+
+      if (messageInput.value.trim().length >= 10) {
+        clearFieldError(messageInput, "message-error");
+      }
+    });
+
+    nameInput.addEventListener("input", () => {
+      if (nameInput.value.trim().length >= 3) {
+        clearFieldError(nameInput, "name-error");
+      }
+    });
+
+    emailInput.addEventListener("input", () => {
+      if (isValidEmail(emailInput.value.trim())) {
+        clearFieldError(emailInput, "email-error");
+      }
+    });
+
+    subjectInput.addEventListener("change", () => {
+      if (subjectInput.value) {
+        clearFieldError(subjectInput, "subject-error");
+      }
+    });
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      formSuccess.classList.add("hidden");
+
+      if (!validateForm()) {
+        const firstInvalidField =
+          contactForm.querySelector('[aria-invalid="true"]');
+
+        if (firstInvalidField) {
+          firstInvalidField.focus();
+        }
+
+        return;
+      }
+
+      setSubmittingState(true);
+
+      window.setTimeout(() => {
+        setSubmittingState(false);
+        resetFormState();
+
+        formSuccess.classList.remove("hidden");
+        formSuccess.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 1200);
+    });
+
+    faqButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector(".faq-icon");
+        const isOpen =
+          button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isOpen));
+        content.classList.toggle("hidden", isOpen);
+        icon.textContent = isOpen ? "+" : "−";
+      });
+    });
+
+    currentYear.textContent = String(new Date().getFullYear());
+
+    updateScrollButton();
+  </script>
 </body>
 </html>
