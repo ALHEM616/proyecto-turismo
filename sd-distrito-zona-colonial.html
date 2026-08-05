@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descubre la Zona Colonial | Santo Domingo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Íconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              colonial: {
+                terracotta: "#C85A32",
+                gold: "#D99B26",
+                coral: "#E76F51",
+                sand: "#FDFBF7",
+                dark: "#1C1917",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-colonial-sand text-stone-800 font-sans antialiased selection:bg-colonial-terracotta selection:text-white"
+  >
+    <!-- Navegación -->
+    <nav
+      class="fixed w-full z-50 bg-stone-900/40 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="flex items-center gap-2">
+          <i class="fa-solid fa-compass text-colonial-gold text-2xl"></i>
+          <span class="font-serif font-bold text-xl tracking-wide text-white"
+            >Zona Colonial</span
+          >
+        </a>
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-200"
+        >
+          <a href="#historia" class="hover:text-colonial-gold transition-colors"
+            >Historia</a
+          >
+          <a
+            href="#imperdibles"
+            class="hover:text-colonial-gold transition-colors"
+            >Imperdibles</a
+          >
+          <a
+            href="#experiencias"
+            class="hover:text-colonial-gold transition-colors"
+            >Experiencias</a
+          >
+          <a href="#guia" class="hover:text-colonial-gold transition-colors"
+            >Guía Visual</a
+          >
+        </div>
+        <a
+          href="#imperdibles"
+          class="bg-colonial-terracotta hover:bg-opacity-90 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg"
+        >
+          Explorar Ahora
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Imagen de fondo con overlays -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&q=80&w=1920"
+          alt="Zona Colonial Calle Callejon"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/40 to-stone-900/30"
+        ></div>
+      </div>
+
+      <div class="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
+        <span
+          class="inline-block bg-white/10 backdrop-blur-md text-colonial-gold border border-colonial-gold/30 text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase"
+        >
+          Patrimonio de la Humanidad UNESCO
+        </span>
+        <h1
+          class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6"
+        >
+          Donde nació el
+          <span class="text-colonial-gold italic font-normal">Nuevo Mundo</span>
+        </h1>
+        <p
+          class="text-stone-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          Recorre adoquines centenarios, arquitectura colonial vibrante, cafés
+          al aire libre y el alma cultural de Santo Domingo.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="#imperdibles"
+            class="w-full sm:w-auto bg-colonial-gold hover:bg-yellow-500 text-stone-900 font-bold px-8 py-4 rounded-full transition-all shadow-lg hover:scale-105"
+          >
+            Lugares Históricos
+          </a>
+          <a
+            href="#experiencias"
+            class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 font-semibold px-8 py-4 rounded-full transition-all"
+          >
+            Qué Hacer
+          </a>
+        </div>
+      </div>
+
+      <!-- Indicador de Scroll -->
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/50 text-sm flex flex-col items-center gap-2 animate-bounce"
+      >
+        <i class="fa-solid fa-arrow-down-long text-lg"></i>
+      </div>
+    </header>
+
+    <!-- Datos Rápidos / Banner -->
+    <section class="bg-stone-900 text-white py-12 border-b border-stone-800">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+      >
+        <div class="space-y-1">
+          <p
+            class="font-serif text-3xl md:text-4xl font-bold text-colonial-gold"
+          >
+            1498
+          </p>
+          <p
+            class="text-xs md:text-sm text-stone-400 font-medium uppercase tracking-wider"
+          >
+            Año de Fundación
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p
+            class="font-serif text-3xl md:text-4xl font-bold text-colonial-gold"
+          >
+            1ª
+          </p>
+          <p
+            class="text-xs md:text-sm text-stone-400 font-medium uppercase tracking-wider"
+          >
+            Catedral de América
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p
+            class="font-serif text-3xl md:text-4xl font-bold text-colonial-gold"
+          >
+            1990
+          </p>
+          <p
+            class="text-xs md:text-sm text-stone-400 font-medium uppercase tracking-wider"
+          >
+            Declarada UNESCO
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p
+            class="font-serif text-3xl md:text-4xl font-bold text-colonial-gold"
+          >
+            +500
+          </p>
+          <p
+            class="text-xs md:text-sm text-stone-400 font-medium uppercase tracking-wider"
+          >
+            Años de Historia
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Historia / Introducción -->
+    <section id="historia" class="py-24 max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span
+            class="text-colonial-terracotta font-semibold text-sm tracking-widest uppercase"
+            >Un Paseo por el Tiempo</span
+          >
+          <h2
+            class="font-serif text-4xl md:text-5xl font-bold text-stone-900 leading-tight"
+          >
+            Magia colonial, calidez caribeña
+          </h2>
+          <p class="text-stone-600 leading-relaxed">
+            La Zona Colonial es el núcleo urbano más antiguo de Santo Domingo y
+            el primer asentamiento europeo en las Américas. Caminar por sus
+            calles trazadas en cuadrícula es adentrarse en la historia viva:
+            aquí se construyeron la primera catedral, el primer hospital, la
+            primera universidad y la primera aduana del continente.
+          </p>
+          <p class="text-stone-600 leading-relaxed">
+            Hoy en día, sus fachadas de tonos terracota y amarillo pastel
+            albergan una vibrante mezcla de galerías de arte, bares de jazz,
+            restaurantes de alta cocina y plazas llenas de música.
+          </p>
+          <div
+            class="pt-4 flex items-center gap-4 text-stone-900 font-semibold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-colonial-gold/20 flex items-center justify-center text-colonial-terracotta"
+            >
+              <i class="fa-solid fa-walking text-xl"></i>
+            </div>
+            <span>100% Caminable y Pet-Friendly</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute -inset-4 bg-colonial-gold/20 rounded-3xl transform rotate-3"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1584968173934-60d438c621b1?auto=format&fit=crop&q=80&w=1000"
+            alt="Arquitectura Zona Colonial"
+            class="relative rounded-2xl shadow-2xl object-cover w-full h-[450px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lugares Imperdibles (Cards) -->
+    <section id="imperdibles" class="py-24 bg-stone-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-colonial-terracotta font-semibold text-sm tracking-widest uppercase"
+            >Puntos de Interés</span
+          >
+          <h2
+            class="font-serif text-4xl md:text-5xl font-bold text-stone-900 mt-2"
+          >
+            Monumentos Imperdibles
+          </h2>
+          <p class="text-stone-600 mt-4">
+            Los hitos arquitectónicos e históricos que no puedes dejar de
+            visitar durante tu estadía.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="./images/Catedral-Primada-de-America.jpg"
+                alt="Catedral Primada de América"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium"
+                >Siglo XVI</span
+              >
+            </div>
+            <div class="p-6">
+              <h3
+                class="font-serif text-2xl font-bold text-stone-900 group-hover:text-colonial-terracotta transition-colors"
+              >
+                Catedral Primada de América
+              </h3>
+              <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                Construida con piedra caliza dorada, es la catedral más antigua
+                de las Américas. Destaca por su arquitectura gótica y
+                renacentista.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=800"
+                alt="Alcázar de Colón"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium"
+                >Plaza España</span
+              >
+            </div>
+            <div class="p-6">
+              <h3
+                class="font-serif text-2xl font-bold text-stone-900 group-hover:text-colonial-terracotta transition-colors"
+              >
+                Alcázar de Colón
+              </h3>
+              <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                Palacio gótico-renacentista que fue residencia de Diego Colón,
+                hijo de Cristóbal Colón. Hoy alberga un museo de época
+                impresionante.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&q=80&w=800"
+                alt="Fortaleza Ozama"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span
+                class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium"
+                >Militar</span
+              >
+            </div>
+            <div class="p-6">
+              <h3
+                class="font-serif text-2xl font-bold text-stone-900 group-hover:text-colonial-terracotta transition-colors"
+              >
+                Fortaleza Ozama
+              </h3>
+              <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                La estructura militar europea más antigua de las Américas,
+                diseñada para vigilar y defender la entrada de la ciudad frente
+                al río Ozama.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencias / Qué hacer -->
+    <section id="experiencias" class="py-24 max-w-7xl mx-auto px-6">
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+      >
+        <div>
+          <span
+            class="text-colonial-terracotta font-semibold text-sm tracking-widest uppercase"
+            >Estilo de Vida</span
+          >
+          <h2
+            class="font-serif text-4xl md:text-5xl font-bold text-stone-900 mt-2"
+          >
+            ¿Qué Hacer en la Zona?
+          </h2>
+        </div>
+        <p class="text-stone-600 max-w-md">
+          Más allá de los museos, la Zona Colonial se vive a través de sus
+          sabores, música y atmósfera relajada.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="bg-white p-8 rounded-2xl border border-stone-200/60 shadow-sm hover:border-colonial-gold transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-6 text-xl"
+          >
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h3 class="font-bold text-xl text-stone-900 mb-2">
+            Cafés en la Calle El Conde
+          </h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Disfruta un auténtico café dominicano mientras contemplas el ir y
+            venir de la peatonal más famosa.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl border border-stone-200/60 shadow-sm hover:border-colonial-gold transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-rose-100 text-rose-800 rounded-xl flex items-center justify-center mb-6 text-xl"
+          >
+            <i class="fa-solid fa-wine-glass"></i>
+          </div>
+          <h3 class="font-bold text-xl text-stone-900 mb-2">
+            Noche en Plaza España
+          </h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Cena al aire libre frente al Alcázar iluminado con opciones
+            gastronómicas locales e internacionales.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl border border-stone-200/60 shadow-sm hover:border-colonial-gold transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center mb-6 text-xl"
+          >
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h3 class="font-bold text-xl text-stone-900 mb-2">
+            Grupo Bonyé los Domingos
+          </h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Música de son, salsa y merengue en vivo gratis en las ruinas del
+            Monasterio de San Francisco.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl border border-stone-200/60 shadow-sm hover:border-colonial-gold transition-all"
+        >
+          <div
+            class="w-12 h-12 bg-orange-100 text-orange-800 rounded-xl flex items-center justify-center mb-6 text-xl"
+          >
+            <i class="fa-solid fa-cookie"></i>
+          </div>
+          <h3 class="font-bold text-xl text-stone-900 mb-2">
+            Ruta del Cacao y Ron
+          </h3>
+          <p class="text-stone-600 text-sm legales text-sm leading-relaxed">
+            Visita los museos interactivos dedicados al chocolate artesanal y la
+            historia del ron dominicano.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Visual -->
+    <section id="guia" class="py-20 bg-stone-900 text-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
+        <h2 class="font-serif text-4xl font-bold">Rincones con Encanto</h2>
+        <p class="text-stone-400 mt-2">
+          Cada callejón tiene una historia y un color único que ofrecer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-6">
+        <img
+          src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&q=80&w=600"
+          class="rounded-xl h-64 w-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+          alt="Callejon"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&q=80&w=600"
+          class="rounded-xl h-64 w-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+          alt="Plaza Colonial"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1584968173934-60d438c621b1?auto=format&fit=crop&q=80&w=600"
+          class="rounded-xl h-64 w-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+          alt="Casas Coloniales"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600"
+          class="rounded-xl h-64 w-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+          alt="Fachada Colonial"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-compass text-colonial-gold text-2xl"></i>
+          <span class="font-serif font-bold text-xl text-white tracking-wide"
+            >Santo Domingo Colonial</span
+          >
+        </div>
+        <p class="text-sm">Guía turística de la Ciudad Primada de América.</p>
+        <div class="flex gap-4 text-stone-300">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center hover:bg-colonial-terracotta transition-colors"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center hover:bg-colonial-terracotta transition-colors"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center hover:bg-colonial-terracotta transition-colors"
+            ><i class="fa-brands fa-tripadvisor"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
