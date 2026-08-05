@@ -4,3 +4,4 @@
 	INTEGRANTES
 ``
 - Moises Mojica
+- Jimmy Alvarez
