@@ -15,3 +15,4 @@
 - Jerson Tasilla Culqui
 - Bryan MG
 - Josias
+- juan salvatierra
