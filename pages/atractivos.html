@@ -1,0 +1,1170 @@
+<!-- pages/atractivos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Descubre los principales atractivos arqueológicos de Tihuanacu: Puerta del Sol, Kalasasaya, Akapana, Puma Punku y más."
+  >
+
+  <meta
+    name="keywords"
+    content="Tihuanacu, Tiwanaku, atractivos, Puerta del Sol, Kalasasaya, Akapana, Puma Punku"
+  >
+
+  <title>Atractivos de Tihuanacu | Turismo cultural</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tierra: {
+              50: "#fff8f1",
+              100: "#fcebd9",
+              200: "#f8d4b4",
+              300: "#f2b584",
+              400: "#e98b50",
+              500: "#d96b2b",
+              600: "#bb4e20",
+              700: "#963b1d",
+              800: "#79321e",
+              900: "#632b1c"
+            },
+            piedra: {
+              50: "#f7f6f3",
+              100: "#ebe8e1",
+              200: "#d8d1c5",
+              300: "#bdb3a3",
+              400: "#a49784",
+              500: "#8a7b68",
+              600: "#706354",
+              700: "#5c5146",
+              800: "#4d443c",
+              900: "#423b35"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Cinzel", "serif"]
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(66, 59, 53, 0.16)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fffaf5;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(32, 24, 18, 0.96) 0%,
+          rgba(32, 24, 18, 0.78) 48%,
+          rgba(32, 24, 18, 0.32) 100%
+        );
+    }
+
+    .pattern-background {
+      background-image:
+        radial-gradient(
+          circle at 1px 1px,
+          rgba(150, 59, 29, 0.15) 1px,
+          transparent 0
+        );
+      background-size: 24px 24px;
+    }
+
+    .attraction-image {
+      transition: transform 500ms ease;
+    }
+
+    .attraction-card:hover .attraction-image {
+      transform: scale(1.06);
+    }
+
+    .image-fallback {
+      background-color: #8a7b68;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-piedra-900 antialiased">
+
+  <!-- Encabezado -->
+  <header
+    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-piedra-900/95 text-white shadow-lg backdrop-blur-md"
+  >
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      aria-label="Navegación principal"
+    >
+      <a
+        href="../lapaz-tihuanacu-bolivia.html"
+        class="flex items-center gap-3"
+        aria-label="Ir a la página de inicio"
+      >
+        <span
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-tierra-700 font-display text-lg font-bold shadow-md"
+        >
+          T
+        </span>
+
+        <span>
+          <span class="block font-display text-lg font-bold leading-none">
+            Tihuanacu
+          </span>
+
+          <span
+            class="mt-1 block text-xs uppercase tracking-[0.25em] text-tierra-200"
+          >
+            Bolivia
+          </span>
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-7 lg:flex">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="historia.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Historia
+        </a>
+
+        <a
+          href="atractivos.html"
+          class="border-b-2 border-tierra-300 pb-1 text-sm font-semibold text-tierra-300"
+          aria-current="page"
+        >
+          Atractivos
+        </a>
+
+        <a
+          href="visita.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Visita
+        </a>
+
+        <a
+          href="galeria.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5 text-sm font-semibold transition hover:bg-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-300"
+        >
+          Contacto
+        </a>
+      </div>
+
+      <button
+        id="menu-button"
+        type="button"
+        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-tierra-300 lg:hidden"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          id="menu-open-icon"
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <svg
+          id="menu-close-icon"
+          class="hidden h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-white/10 bg-piedra-900 px-4 py-5 lg:hidden"
+    >
+      <div class="mx-auto flex max-w-7xl flex-col gap-2">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="historia.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Historia
+        </a>
+
+        <a
+          href="atractivos.html"
+          class="mobile-link rounded-lg bg-white/10 px-4 py-3 font-semibold text-tierra-300"
+          aria-current="page"
+        >
+          Atractivos
+        </a>
+
+        <a
+          href="visita.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Visita
+        </a>
+
+        <a
+          href="galeria.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="mobile-link mt-2 rounded-lg bg-tierra-600 px-4 py-3 text-center font-semibold"
+        >
+          Contacto
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section
+      class="relative min-h-screen overflow-hidden bg-piedra-900"
+      aria-labelledby="atractivos-title"
+    >
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiwanaku_-_Kalasasaya%2C_Templo_do_Sol.jpg"
+        alt="Complejo arqueológico de Kalasasaya en Tihuanacu"
+        class="image-fallback absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="hero-overlay absolute inset-0"></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-piedra-900/90 via-transparent to-piedra-900/20"
+      ></div>
+
+      <div
+        class="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 pb-20 pt-36 sm:px-6 lg:px-8"
+      >
+        <div class="max-w-3xl text-white">
+          <span
+            class="inline-flex items-center gap-3 rounded-full border border-tierra-300/40 bg-black/30 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-tierra-200 backdrop-blur-sm"
+          >
+            <span class="h-2 w-2 rounded-full bg-tierra-300"></span>
+            Patrimonio arqueológico
+          </span>
+
+          <h1
+            id="atractivos-title"
+            class="mt-7 font-display text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl"
+          >
+            Atractivos de
+            <span class="text-tierra-300">Tihuanacu</span>
+          </h1>
+
+          <p
+            class="mt-7 max-w-2xl text-lg leading-8 text-piedra-100 sm:text-xl"
+          >
+            Recorre templos, monolitos, plataformas y monumentos que muestran
+            el conocimiento arquitectónico y cultural de la civilización.
+          </p>
+
+          <a
+            href="#monumentos"
+            class="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-tierra-600 px-7 py-3.5 font-semibold shadow-lg transition hover:-translate-y-0.5 hover:bg-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-300"
+          >
+            Explorar monumentos
+
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28"
+      aria-labelledby="introduccion-title"
+    >
+      <div class="pattern-background absolute inset-0 opacity-40"></div>
+
+      <div
+        class="relative mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      >
+        <div>
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Recorrido arqueológico
+          </p>
+
+          <h2
+            id="introduccion-title"
+            class="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl"
+          >
+            Monumentos que conservan la memoria andina
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-piedra-600">
+            El complejo arqueológico de Tihuanacu reúne construcciones
+            monumentales, esculturas y espacios ceremoniales que permiten
+            comprender la organización y el conocimiento de esta civilización.
+          </p>
+
+          <p class="mt-5 leading-8 text-piedra-600">
+            Cada atractivo forma parte de un conjunto cultural conectado con
+            la espiritualidad, la arquitectura, la agricultura y la vida
+            comunitaria del altiplano.
+          </p>
+
+          <div class="mt-9 grid gap-5 sm:grid-cols-2">
+            <article
+              class="rounded-2xl border border-piedra-200 bg-tierra-50 p-6"
+            >
+              <h3 class="font-display text-xl font-bold text-tierra-700">
+                Arquitectura
+              </h3>
+
+              <p class="mt-2 text-sm leading-6 text-piedra-600">
+                Grandes bloques de piedra trabajados con precisión.
+              </p>
+            </article>
+
+            <article
+              class="rounded-2xl border border-piedra-200 bg-tierra-50 p-6"
+            >
+              <h3 class="font-display text-xl font-bold text-tierra-700">
+                Simbolismo
+              </h3>
+
+              <p class="mt-2 text-sm leading-6 text-piedra-600">
+                Relieves y esculturas vinculados con la tradición andina.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="relative pb-8">
+          <div
+            class="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-tierra-300/30 blur-3xl"
+          ></div>
+
+          <div class="overflow-hidden rounded-[2rem] shadow-soft">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puerta_del_Sol_en_Tiwanaku_%28Bolivia%29.jpg"
+              alt="Puerta del Sol de Tihuanacu"
+              class="image-fallback h-[540px] w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <div
+            class="absolute bottom-0 left-5 right-5 rounded-2xl bg-piedra-900 p-6 text-white shadow-xl sm:left-10 sm:right-auto sm:max-w-sm"
+          >
+            <p class="font-display text-xl font-bold text-tierra-300">
+              Patrimonio monumental
+            </p>
+
+            <p class="mt-2 text-sm leading-6 text-piedra-200">
+              Cada construcción muestra la capacidad técnica y artística de
+              Tihuanacu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monumentos -->
+    <section
+      id="monumentos"
+      class="bg-piedra-100 py-24 sm:py-28"
+      aria-labelledby="monumentos-title"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Lugares destacados
+          </p>
+
+          <h2
+            id="monumentos-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
+          >
+            Principales atractivos arqueológicos
+          </h2>
+
+          <p class="mt-5 text-lg leading-8 text-piedra-600">
+            Descubre los espacios más representativos del complejo
+            arqueológico.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Puerta del Sol -->
+          <article
+            class="attraction-card group overflow-hidden rounded-3xl bg-white shadow-soft"
+          >
+            <div class="overflow-hidden bg-piedra-400">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puerta_del_Sol_en_Tiwanaku_%28Bolivia%29.jpg"
+                alt="Puerta del Sol de Tihuanacu"
+                class="attraction-image image-fallback h-64 w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="p-7">
+              <span
+                class="inline-flex rounded-full bg-tierra-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-tierra-700"
+              >
+                Monumento
+              </span>
+
+              <h3 class="mt-4 font-display text-2xl font-bold">
+                Puerta del Sol
+              </h3>
+
+              <p class="mt-3 leading-7 text-piedra-600">
+                Monumento tallado en un gran bloque de piedra y reconocido por
+                sus relieves ceremoniales.
+              </p>
+
+              <div
+                class="mt-6 flex items-center justify-between border-t border-piedra-200 pt-5"
+              >
+                <span class="text-sm font-semibold text-piedra-500">
+                  Imperdible
+                </span>
+
+                <span class="font-bold text-tierra-700">
+                  01
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kalasasaya -->
+          <article
+            class="attraction-card group overflow-hidden rounded-3xl bg-white shadow-soft"
+          >
+            <div class="overflow-hidden bg-piedra-400">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiwanaku_-_Kalasasaya%2C_Templo_do_Sol.jpg"
+                alt="Templo de Kalasasaya"
+                class="attraction-image image-fallback h-64 w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="p-7">
+              <span
+                class="inline-flex rounded-full bg-tierra-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-tierra-700"
+              >
+                Templo
+              </span>
+
+              <h3 class="mt-4 font-display text-2xl font-bold">
+                Kalasasaya
+              </h3>
+
+              <p class="mt-3 leading-7 text-piedra-600">
+                Espacio ceremonial formado por muros, pilares y grandes bloques
+                cuidadosamente trabajados.
+              </p>
+
+              <div
+                class="mt-6 flex items-center justify-between border-t border-piedra-200 pt-5"
+              >
+                <span class="text-sm font-semibold text-piedra-500">
+                  Ceremonial
+                </span>
+
+                <span class="font-bold text-tierra-700">
+                  02
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Akapana -->
+          <article
+            class="attraction-card group overflow-hidden rounded-3xl bg-white shadow-soft"
+          >
+            <div class="overflow-hidden bg-piedra-400">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pir%C3%A1mide_de_Akapana_en_Tiwanaku.jpg"
+                alt="Pirámide de Akapana en Tihuanacu"
+                class="attraction-image image-fallback h-64 w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="p-7">
+              <span
+                class="inline-flex rounded-full bg-tierra-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-tierra-700"
+              >
+                Plataforma
+              </span>
+
+              <h3 class="mt-4 font-display text-2xl font-bold">
+                Pirámide de Akapana
+              </h3>
+
+              <p class="mt-3 leading-7 text-piedra-600">
+                Construcción monumental que evidencia la planificación
+                arquitectónica y ceremonial del sitio.
+              </p>
+
+              <div
+                class="mt-6 flex items-center justify-between border-t border-piedra-200 pt-5"
+              >
+                <span class="text-sm font-semibold text-piedra-500">
+                  Monumental
+                </span>
+
+                <span class="font-bold text-tierra-700">
+                  03
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Templete -->
+          <article
+            class="attraction-card group overflow-hidden rounded-3xl bg-white shadow-soft"
+          >
+            <div class="overflow-hidden bg-piedra-400">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiwanaku_Templete_Semisubterraneo.jpg"
+                alt="Templete semisubterráneo de Tihuanacu"
+                class="attraction-image image-fallback h-64 w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="p-7">
+              <span
+                class="inline-flex rounded-full bg-tierra-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-tierra-700"
+              >
+                Santuario
+              </span>
+
+              <h3 class="mt-4 font-display text-2xl font-bold">
+                Templete semisubterráneo
+              </h3>
+
+              <p class="mt-3 leading-7 text-piedra-600">
+                Espacio ceremonial situado bajo el nivel del terreno y
+                reconocido por las esculturas de sus muros.
+              </p>
+
+              <div
+                class="mt-6 flex items-center justify-between border-t border-piedra-200 pt-5"
+              >
+                <span class="text-sm font-semibold text-piedra-500">
+                  Esculturas
+                </span>
+
+                <span class="font-bold text-tierra-700">
+                  04
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Monolito -->
+          <article
+            class="attraction-card group overflow-hidden rounded-3xl bg-white shadow-soft"
+          >
+            <div class="overflow-hidden bg-piedra-400">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiwanaku_-_Ponce_monolith.jpg"
+                alt="Monolito Ponce de Tihuanacu"
+                class="attraction-image image-fallback h-64 w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="p-7">
+              <span
+                class="inline-flex rounded-full bg-tierra-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-tierra-700"
+              >
+                Escultura
+              </span>
+
+              <h3 class="mt-4 font-display text-2xl font-bold">
+                Monolito Ponce
+              </h3>
+
+              <p class="mt-3 leading-7 text-piedra-600">
+                Escultura antropomorfa de piedra con detalles simbólicos y
+                elementos ceremoniales.
+              </p>
+
+              <div
+                class="mt-6 flex items-center justify-between border-t border-piedra-200 pt-5"
+              >
+                <span class="text-sm font-semibold text-piedra-500">
+                  Arte lítico
+                </span>
+
+                <span class="font-bold text-tierra-700">
+                  05
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Puma Punku -->
+          <article
+            class="attraction-card group overflow-hidden rounded-3xl bg-white shadow-soft"
+          >
+            <div class="overflow-hidden bg-piedra-400">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pumapunku_Tiwanaku.jpg"
+                alt="Bloques de piedra de Puma Punku"
+                class="attraction-image image-fallback h-64 w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="p-7">
+              <span
+                class="inline-flex rounded-full bg-tierra-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-tierra-700"
+              >
+                Complejo
+              </span>
+
+              <h3 class="mt-4 font-display text-2xl font-bold">
+                Puma Punku
+              </h3>
+
+              <p class="mt-3 leading-7 text-piedra-600">
+                Conjunto arquitectónico conocido por sus grandes bloques de
+                piedra y sus cortes geométricos.
+              </p>
+
+              <div
+                class="mt-6 flex items-center justify-between border-t border-piedra-200 pt-5"
+              >
+                <span class="text-sm font-semibold text-piedra-500">
+                  Ingeniería
+                </span>
+
+                <span class="font-bold text-tierra-700">
+                  06
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Recorrido recomendado -->
+    <section
+      class="bg-white py-24 sm:py-28"
+      aria-labelledby="recorrido-title"
+    >
+      <div
+        class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      >
+        <div class="overflow-hidden rounded-[2rem] shadow-soft">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puerta_y_escalinata_del_templo_Kalasasaya_Tiwanaku_Bolivia.jpg"
+            alt="Puerta y escalinata del templo de Kalasasaya"
+            class="image-fallback h-[540px] w-full object-cover"
+            loading="lazy"
+          >
+        </div>
+
+        <div>
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Organiza tu experiencia
+          </p>
+
+          <h2
+            id="recorrido-title"
+            class="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl"
+          >
+            Recorrido recomendado
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-piedra-600">
+            Para comprender mejor el conjunto arqueológico, recorre los
+            monumentos siguiendo un orden que combine arquitectura, esculturas
+            y espacios ceremoniales.
+          </p>
+
+          <div class="mt-9 space-y-5">
+            <article class="flex gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-tierra-700 font-bold text-white"
+              >
+                1
+              </span>
+
+              <div>
+                <h3 class="font-bold">
+                  Inicia en el templete
+                </h3>
+
+                <p class="mt-1 leading-7 text-piedra-600">
+                  Observa las esculturas incorporadas en sus muros.
+                </p>
+              </div>
+            </article>
+
+            <article class="flex gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-tierra-700 font-bold text-white"
+              >
+                2
+              </span>
+
+              <div>
+                <h3 class="font-bold">
+                  Continúa hacia Kalasasaya
+                </h3>
+
+                <p class="mt-1 leading-7 text-piedra-600">
+                  Recorre sus pilares, accesos y espacios ceremoniales.
+                </p>
+              </div>
+            </article>
+
+            <article class="flex gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-tierra-700 font-bold text-white"
+              >
+                3
+              </span>
+
+              <div>
+                <h3 class="font-bold">
+                  Finaliza en Akapana y Puma Punku
+                </h3>
+
+                <p class="mt-1 leading-7 text-piedra-600">
+                  Conoce las construcciones monumentales y su ingeniería.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <a
+            href="visita.html"
+            class="mt-9 inline-flex rounded-full bg-piedra-900 px-7 py-3.5 font-semibold text-white transition hover:bg-tierra-700"
+          >
+            Planificar la visita
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recomendaciones -->
+    <section
+      class="bg-piedra-900 py-24 text-white sm:py-28"
+      aria-labelledby="recomendaciones-title"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-300"
+          >
+            Turismo responsable
+          </p>
+
+          <h2
+            id="recomendaciones-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
+          >
+            Protejamos el patrimonio
+          </h2>
+
+          <p class="mt-5 text-lg leading-8 text-piedra-200">
+            Tu comportamiento ayuda a conservar los monumentos para las futuras
+            generaciones.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
+          >
+            <span
+              class="flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-600 text-2xl"
+            >
+              🚶
+            </span>
+
+            <h3 class="mt-6 font-display text-2xl font-bold">
+              Respeta los caminos
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Utiliza únicamente los senderos y accesos habilitados.
+            </p>
+          </article>
+
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
+          >
+            <span
+              class="flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-600 text-2xl"
+            >
+              🏛️
+            </span>
+
+            <h3 class="mt-6 font-display text-2xl font-bold">
+              No toques las piezas
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Evita subir, apoyarte o tocar los monumentos arqueológicos.
+            </p>
+          </article>
+
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
+          >
+            <span
+              class="flex h-14 w-14 items-center justify-center rounded-2xl bg-tierra-600 text-2xl"
+            >
+              📷
+            </span>
+
+            <h3 class="mt-6 font-display text-2xl font-bold">
+              Fotografía responsable
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Sigue las indicaciones sobre fotografías y equipos permitidos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acción final -->
+    <section class="bg-tierra-700 py-20 text-white">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 text-center sm:px-6 lg:flex-row lg:px-8 lg:text-left"
+      >
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-200"
+          >
+            Continúa explorando
+          </p>
+
+          <h2 class="mt-4 font-display text-4xl font-bold">
+            Descubre Tihuanacu a través de sus imágenes
+          </h2>
+
+          <p class="mt-4 text-lg leading-8 text-tierra-100">
+            Visita nuestra galería y conoce más detalles de sus monumentos y
+            paisajes.
+          </p>
+        </div>
+
+        <a
+          href="galeria.html"
+          class="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-7 py-3.5 font-bold text-tierra-800 transition hover:-translate-y-1 hover:bg-tierra-100"
+        >
+          Ver galería
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-piedra-900 text-white">
+    <div
+      class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8"
+    >
+      <div class="lg:col-span-2">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="inline-flex items-center gap-3"
+        >
+          <span
+            class="flex h-11 w-11 items-center justify-center rounded-full bg-tierra-700 font-display text-lg font-bold"
+          >
+            T
+          </span>
+
+          <span class="font-display text-xl font-bold">
+            Tihuanacu
+          </span>
+        </a>
+
+        <p class="mt-5 max-w-lg leading-7 text-piedra-300">
+          Una plataforma dedicada a difundir la historia, cultura y patrimonio
+          turístico de Tihuanacu.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-bold">
+          Navegación
+        </h2>
+
+        <ul class="mt-5 space-y-3 text-piedra-300">
+          <li>
+            <a
+              href="../lapaz-tihuanacu-bolivia.html"
+              class="transition hover:text-tierra-300"
+            >
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="historia.html"
+              class="transition hover:text-tierra-300"
+            >
+              Historia
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="galeria.html"
+              class="transition hover:text-tierra-300"
+            >
+              Galería
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-bold">
+          Información
+        </h2>
+
+        <ul class="mt-5 space-y-3 text-piedra-300">
+          <li>
+            <a
+              href="visita.html"
+              class="transition hover:text-tierra-300"
+            >
+              Planificar visita
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="contacto.html"
+              class="transition hover:text-tierra-300"
+            >
+              Contacto
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://commons.wikimedia.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition hover:text-tierra-300"
+            >
+              Créditos fotográficos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-center text-sm text-piedra-400 sm:px-6 md:flex-row md:items-center md:justify-between md:text-left lg:px-8"
+      >
+        <p>
+          © <span id="current-year"></span> Turismo Tihuanacu.
+        </p>
+
+        <p>
+          Fotografías proporcionadas mediante Wikimedia Commons.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón para volver arriba -->
+  <button
+    id="scroll-top-button"
+    type="button"
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-tierra-700 text-white shadow-xl transition hover:-translate-y-1 hover:bg-tierra-800 focus:outline-none focus:ring-4 focus:ring-tierra-200"
+    aria-label="Volver al inicio"
+  >
+    <svg
+      class="h-6 w-6"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m5 15 7-7 7 7"
+      />
+    </svg>
+  </button>
+
+  <script>
+    "use strict";
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuOpenIcon = document.getElementById("menu-open-icon");
+    const menuCloseIcon = document.getElementById("menu-close-icon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+    const currentYear = document.getElementById("current-year");
+    const scrollTopButton = document.getElementById("scroll-top-button");
+
+    function setMobileMenuState(isOpen) {
+      mobileMenu.classList.toggle("hidden", !isOpen);
+      menuOpenIcon.classList.toggle("hidden", isOpen);
+      menuCloseIcon.classList.toggle("hidden", !isOpen);
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Cerrar menú" : "Abrir menú"
+      );
+    }
+
+    function updateScrollButton() {
+      const shouldShowButton = window.scrollY > 500;
+
+      scrollTopButton.classList.toggle("hidden", !shouldShowButton);
+      scrollTopButton.classList.toggle("flex", shouldShowButton);
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      setMobileMenuState(!isOpen);
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        setMobileMenuState(false);
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuState(false);
+      }
+    });
+
+    window.addEventListener("scroll", updateScrollButton);
+
+    scrollTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    currentYear.textContent = String(new Date().getFullYear());
+    updateScrollButton();
+  </script>
+</body>
+</html>
