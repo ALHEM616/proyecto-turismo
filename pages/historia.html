@@ -1,0 +1,1079 @@
+<!-- pages/historia.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Conoce la historia, el desarrollo y el legado cultural de Tihuanacu."
+  >
+
+  <title>Historia de Tihuanacu | Turismo cultural</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tierra: {
+              50: "#fff8f1",
+              100: "#fcebd9",
+              200: "#f8d4b4",
+              300: "#f2b584",
+              400: "#e98b50",
+              500: "#d96b2b",
+              600: "#bb4e20",
+              700: "#963b1d",
+              800: "#79321e",
+              900: "#632b1c"
+            },
+            piedra: {
+              50: "#f7f6f3",
+              100: "#ebe8e1",
+              200: "#d8d1c5",
+              300: "#bdb3a3",
+              400: "#a49784",
+              500: "#8a7b68",
+              600: "#706354",
+              700: "#5c5146",
+              800: "#4d443c",
+              900: "#423b35"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Cinzel", "serif"]
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(66, 59, 53, 0.16)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fffaf5;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(32, 24, 18, 0.96) 0%,
+          rgba(32, 24, 18, 0.8) 48%,
+          rgba(32, 24, 18, 0.32) 100%
+        );
+    }
+
+    .pattern-background {
+      background-image:
+        radial-gradient(
+          circle at 1px 1px,
+          rgba(150, 59, 29, 0.15) 1px,
+          transparent 0
+        );
+      background-size: 24px 24px;
+    }
+
+    .image-fallback {
+      background-color: #8a7b68;
+    }
+
+    .timeline-line {
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          #bb4e20 5%,
+          #bb4e20 95%,
+          transparent
+        );
+    }
+  </style>
+</head>
+
+<body class="font-sans text-piedra-900 antialiased">
+
+  <!-- Encabezado -->
+  <header
+    class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-piedra-900/95 text-white shadow-lg backdrop-blur-md"
+  >
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      aria-label="Navegación principal"
+    >
+      <a
+        href="../lapaz-tihuanacu-bolivia.html"
+        class="flex items-center gap-3"
+        aria-label="Ir a la página de inicio"
+      >
+        <span
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-tierra-700 font-display text-lg font-bold shadow-md"
+        >
+          T
+        </span>
+
+        <span>
+          <span class="block font-display text-lg font-bold leading-none">
+            Tihuanacu
+          </span>
+
+          <span
+            class="mt-1 block text-xs uppercase tracking-[0.25em] text-tierra-200"
+          >
+            Bolivia
+          </span>
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-7 lg:flex">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="historia.html"
+          class="border-b-2 border-tierra-300 pb-1 text-sm font-semibold text-tierra-300"
+          aria-current="page"
+        >
+          Historia
+        </a>
+
+        <a
+          href="atractivos.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Atractivos
+        </a>
+
+        <a
+          href="visita.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Visita
+        </a>
+
+        <a
+          href="galeria.html"
+          class="text-sm font-medium transition hover:text-tierra-300"
+        >
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="rounded-full bg-tierra-600 px-5 py-2.5 text-sm font-semibold transition hover:bg-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-300"
+        >
+          Contacto
+        </a>
+      </div>
+
+      <button
+        id="menu-button"
+        type="button"
+        class="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-tierra-300 lg:hidden"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          id="menu-open-icon"
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <svg
+          id="menu-close-icon"
+          class="hidden h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-white/10 bg-piedra-900 px-4 py-5 lg:hidden"
+    >
+      <div class="mx-auto flex max-w-7xl flex-col gap-2">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="historia.html"
+          class="mobile-link rounded-lg bg-white/10 px-4 py-3 font-semibold text-tierra-300"
+          aria-current="page"
+        >
+          Historia
+        </a>
+
+        <a
+          href="atractivos.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Atractivos
+        </a>
+
+        <a
+          href="visita.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Visita
+        </a>
+
+        <a
+          href="galeria.html"
+          class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10"
+        >
+          Galería
+        </a>
+
+        <a
+          href="contacto.html"
+          class="mobile-link mt-2 rounded-lg bg-tierra-600 px-4 py-3 text-center font-semibold"
+        >
+          Contacto
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section
+      class="relative min-h-screen overflow-hidden bg-piedra-900"
+      aria-labelledby="historia-title"
+    >
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puerta_del_Sol_en_Tiwanaku_%28Bolivia%29.jpg"
+        alt="Puerta del Sol en el complejo arqueológico de Tihuanacu"
+        class="image-fallback absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="hero-overlay absolute inset-0"></div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-piedra-900/90 via-transparent to-piedra-900/20"
+      ></div>
+
+      <div
+        class="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 pb-20 pt-36 sm:px-6 lg:px-8"
+      >
+        <div class="max-w-3xl text-white">
+          <span
+            class="inline-flex items-center gap-3 rounded-full border border-tierra-300/40 bg-black/30 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-tierra-200 backdrop-blur-sm"
+          >
+            <span class="h-2 w-2 rounded-full bg-tierra-300"></span>
+            Legado ancestral
+          </span>
+
+          <h1
+            id="historia-title"
+            class="mt-7 font-display text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl"
+          >
+            Historia de
+            <span class="text-tierra-300">Tihuanacu</span>
+          </h1>
+
+          <p
+            class="mt-7 max-w-2xl text-lg leading-8 text-piedra-100 sm:text-xl"
+          >
+            Conoce el origen, el crecimiento y el legado de una civilización
+            que dejó una profunda huella en la región andina.
+          </p>
+
+          <a
+            href="#linea-tiempo"
+            class="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-tierra-600 px-7 py-3.5 font-semibold shadow-lg transition hover:-translate-y-0.5 hover:bg-tierra-500 focus:outline-none focus:ring-2 focus:ring-tierra-300"
+          >
+            Recorrer la historia
+
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28"
+      aria-labelledby="civilizacion-title"
+    >
+      <div class="pattern-background absolute inset-0 opacity-40"></div>
+
+      <div
+        class="relative mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      >
+        <div>
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Civilización andina
+          </p>
+
+          <h2
+            id="civilizacion-title"
+            class="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl"
+          >
+            Una sociedad de grandes conocimientos
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-piedra-600">
+            Tihuanacu fue un importante centro político, ceremonial y cultural
+            del altiplano. Sus habitantes desarrollaron conocimientos
+            relacionados con la agricultura, la arquitectura y la organización
+            comunitaria.
+          </p>
+
+          <p class="mt-5 leading-8 text-piedra-600">
+            Su influencia alcanzó diferentes zonas de los Andes y dejó
+            expresiones artísticas, técnicas constructivas y símbolos que
+            continúan formando parte de la identidad cultural de la región.
+          </p>
+
+          <div class="mt-9 grid gap-5 sm:grid-cols-2">
+            <article
+              class="rounded-2xl border border-piedra-200 bg-tierra-50 p-6"
+            >
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-tierra-100 text-tierra-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"
+                  />
+                </svg>
+              </span>
+
+              <h3 class="mt-5 font-display text-xl font-bold">
+                Arquitectura
+              </h3>
+
+              <p class="mt-2 text-sm leading-6 text-piedra-600">
+                Monumentos construidos con grandes bloques de piedra
+                cuidadosamente trabajados.
+              </p>
+            </article>
+
+            <article
+              class="rounded-2xl border border-piedra-200 bg-tierra-50 p-6"
+            >
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-tierra-100 text-tierra-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 3v18M5 8c4 0 7 2 7 6M19 8c-4 0-7 2-7 6"
+                  />
+                </svg>
+              </span>
+
+              <h3 class="mt-5 font-display text-xl font-bold">
+                Agricultura
+              </h3>
+
+              <p class="mt-2 text-sm leading-6 text-piedra-600">
+                Técnicas desarrolladas para aprovechar las condiciones
+                particulares del altiplano.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="relative pb-8">
+          <div
+            class="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-tierra-300/30 blur-3xl"
+          ></div>
+
+          <div class="overflow-hidden rounded-[2rem] shadow-soft">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiwanaku_-_Kalasasaya%2C_Templo_do_Sol.jpg"
+              alt="Vista general del templo de Kalasasaya en Tihuanacu"
+              class="image-fallback h-[540px] w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <div
+            class="absolute bottom-0 left-5 right-5 rounded-2xl bg-piedra-900 p-6 text-white shadow-xl sm:left-10 sm:right-auto sm:max-w-sm"
+          >
+            <p class="font-display text-xl font-bold text-tierra-300">
+              Ingeniería ancestral
+            </p>
+
+            <p class="mt-2 text-sm leading-6 text-piedra-200">
+              Sus construcciones muestran planificación, precisión y trabajo
+              comunitario.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datos destacados -->
+    <section class="bg-piedra-900 py-16 text-white">
+      <div
+        class="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8"
+      >
+        <article
+          class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+        >
+          <p
+            class="text-xs font-bold uppercase tracking-[0.2em] text-tierra-300"
+          >
+            Territorio
+          </p>
+
+          <h2 class="mt-3 font-display text-2xl font-bold">
+            Altiplano andino
+          </h2>
+        </article>
+
+        <article
+          class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+        >
+          <p
+            class="text-xs font-bold uppercase tracking-[0.2em] text-tierra-300"
+          >
+            Organización
+          </p>
+
+          <h2 class="mt-3 font-display text-2xl font-bold">
+            Centro ceremonial
+          </h2>
+        </article>
+
+        <article
+          class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+        >
+          <p
+            class="text-xs font-bold uppercase tracking-[0.2em] text-tierra-300"
+          >
+            Conocimiento
+          </p>
+
+          <h2 class="mt-3 font-display text-2xl font-bold">
+            Ingeniería y cultivo
+          </h2>
+        </article>
+
+        <article
+          class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+        >
+          <p
+            class="text-xs font-bold uppercase tracking-[0.2em] text-tierra-300"
+          >
+            Permanencia
+          </p>
+
+          <h2 class="mt-3 font-display text-2xl font-bold">
+            Patrimonio cultural
+          </h2>
+        </article>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo -->
+    <section
+      id="linea-tiempo"
+      class="bg-tierra-50 py-24 sm:py-28"
+      aria-labelledby="linea-tiempo-title"
+    >
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Evolución histórica
+          </p>
+
+          <h2
+            id="linea-tiempo-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
+          >
+            Etapas de Tihuanacu
+          </h2>
+
+          <p class="mt-5 text-lg leading-8 text-piedra-600">
+            Un recorrido general por los principales momentos de su formación,
+            desarrollo y permanencia cultural.
+          </p>
+        </div>
+
+        <div class="relative mt-16">
+          <div
+            class="timeline-line absolute bottom-0 left-5 top-0 w-1 md:left-1/2 md:-translate-x-1/2"
+            aria-hidden="true"
+          ></div>
+
+          <div class="space-y-14">
+
+            <!-- Etapa 1 -->
+            <article
+              class="relative grid gap-8 pl-16 md:grid-cols-2 md:pl-0"
+            >
+              <div
+                class="rounded-3xl border border-piedra-200 bg-white p-7 shadow-sm md:mr-14 md:text-right"
+              >
+                <span
+                  class="inline-flex rounded-full bg-tierra-100 px-4 py-2 text-xs font-bold uppercase tracking-wider text-tierra-700"
+                >
+                  Primera etapa
+                </span>
+
+                <h3 class="mt-5 font-display text-3xl font-bold">
+                  Formación de los asentamientos
+                </h3>
+
+                <p class="mt-4 leading-8 text-piedra-600">
+                  Las primeras comunidades aprovecharon los recursos del
+                  altiplano y desarrollaron formas de producción adaptadas al
+                  clima y al territorio.
+                </p>
+              </div>
+
+              <div
+                class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full border-4 border-tierra-50 bg-tierra-700 font-bold text-white shadow-md md:left-1/2 md:-translate-x-1/2"
+              >
+                1
+              </div>
+
+              <div class="hidden md:block"></div>
+            </article>
+
+            <!-- Etapa 2 -->
+            <article
+              class="relative grid gap-8 pl-16 md:grid-cols-2 md:pl-0"
+            >
+              <div class="hidden md:block"></div>
+
+              <div
+                class="rounded-3xl border border-piedra-200 bg-white p-7 shadow-sm md:ml-14"
+              >
+                <span
+                  class="inline-flex rounded-full bg-tierra-100 px-4 py-2 text-xs font-bold uppercase tracking-wider text-tierra-700"
+                >
+                  Desarrollo
+                </span>
+
+                <h3 class="mt-5 font-display text-3xl font-bold">
+                  Crecimiento político y cultural
+                </h3>
+
+                <p class="mt-4 leading-8 text-piedra-600">
+                  Tihuanacu adquirió importancia como centro ceremonial,
+                  productivo y social conectado con diferentes comunidades
+                  andinas.
+                </p>
+              </div>
+
+              <div
+                class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full border-4 border-tierra-50 bg-tierra-700 font-bold text-white shadow-md md:left-1/2 md:-translate-x-1/2"
+              >
+                2
+              </div>
+            </article>
+
+            <!-- Etapa 3 -->
+            <article
+              class="relative grid gap-8 pl-16 md:grid-cols-2 md:pl-0"
+            >
+              <div
+                class="rounded-3xl border border-piedra-200 bg-white p-7 shadow-sm md:mr-14 md:text-right"
+              >
+                <span
+                  class="inline-flex rounded-full bg-tierra-100 px-4 py-2 text-xs font-bold uppercase tracking-wider text-tierra-700"
+                >
+                  Esplendor
+                </span>
+
+                <h3 class="mt-5 font-display text-3xl font-bold">
+                  Arquitectura monumental
+                </h3>
+
+                <p class="mt-4 leading-8 text-piedra-600">
+                  Se levantaron templos, plataformas, monolitos y espacios
+                  ceremoniales mediante grandes bloques de piedra.
+                </p>
+              </div>
+
+              <div
+                class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full border-4 border-tierra-50 bg-tierra-700 font-bold text-white shadow-md md:left-1/2 md:-translate-x-1/2"
+              >
+                3
+              </div>
+
+              <div class="hidden md:block"></div>
+            </article>
+
+            <!-- Etapa 4 -->
+            <article
+              class="relative grid gap-8 pl-16 md:grid-cols-2 md:pl-0"
+            >
+              <div class="hidden md:block"></div>
+
+              <div
+                class="rounded-3xl border border-piedra-200 bg-white p-7 shadow-sm md:ml-14"
+              >
+                <span
+                  class="inline-flex rounded-full bg-tierra-100 px-4 py-2 text-xs font-bold uppercase tracking-wider text-tierra-700"
+                >
+                  Legado
+                </span>
+
+                <h3 class="mt-5 font-display text-3xl font-bold">
+                  Patrimonio e identidad
+                </h3>
+
+                <p class="mt-4 leading-8 text-piedra-600">
+                  Actualmente, Tihuanacu mantiene un importante valor
+                  histórico, cultural y espiritual para Bolivia y los pueblos
+                  de los Andes.
+                </p>
+              </div>
+
+              <div
+                class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full border-4 border-tierra-50 bg-tierra-700 font-bold text-white shadow-md md:left-1/2 md:-translate-x-1/2"
+              >
+                4
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monumento destacado -->
+    <section
+      class="bg-white py-24 sm:py-28"
+      aria-labelledby="puerta-sol-title"
+    >
+      <div
+        class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      >
+        <div class="overflow-hidden rounded-[2rem] shadow-soft">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puerta_y_escalinata_del_templo_Kalasasaya_Tiwanaku_Bolivia.jpg"
+            alt="Puerta y escalinata del templo de Kalasasaya"
+            class="image-fallback h-[520px] w-full object-cover"
+            loading="lazy"
+          >
+        </div>
+
+        <div>
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-700"
+          >
+            Arquitectura ceremonial
+          </p>
+
+          <h2
+            id="puerta-sol-title"
+            class="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl"
+          >
+            Monumentos que preservan la memoria
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-piedra-600">
+            Los espacios ceremoniales de Tihuanacu permiten observar el
+            cuidado con el que fueron planificados y construidos sus templos,
+            plataformas y accesos.
+          </p>
+
+          <p class="mt-5 leading-8 text-piedra-600">
+            Cada estructura forma parte de un conjunto arqueológico que ayuda a
+            comprender las prácticas sociales, culturales y religiosas de la
+            civilización.
+          </p>
+
+          <a
+            href="atractivos.html"
+            class="mt-9 inline-flex items-center gap-2 rounded-full bg-piedra-900 px-7 py-3.5 font-semibold text-white transition hover:bg-tierra-700"
+          >
+            Explorar los atractivos
+
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legado -->
+    <section
+      class="bg-piedra-900 py-24 text-white sm:py-28"
+      aria-labelledby="legado-title"
+    >
+      <div
+        class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      >
+        <div>
+          <p
+            class="text-sm font-bold uppercase tracking-[0.25em] text-tierra-300"
+          >
+            Patrimonio vivo
+          </p>
+
+          <h2
+            id="legado-title"
+            class="mt-4 font-display text-4xl font-bold sm:text-5xl"
+          >
+            Un legado que continúa presente
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-piedra-200">
+            La importancia de Tihuanacu no pertenece únicamente al pasado. Sus
+            símbolos, conocimientos y expresiones culturales continúan
+            presentes en la memoria de las comunidades andinas.
+          </p>
+
+          <a
+            href="visita.html"
+            class="mt-9 inline-flex items-center justify-center rounded-full bg-tierra-600 px-7 py-3.5 font-semibold transition hover:bg-tierra-500"
+          >
+            Planificar una visita
+          </a>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm"
+          >
+            <h3 class="font-display text-2xl font-bold text-tierra-300">
+              Arquitectura
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Templos, plataformas y esculturas monumentales.
+            </p>
+          </article>
+
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm"
+          >
+            <h3 class="font-display text-2xl font-bold text-tierra-300">
+              Agricultura
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Técnicas adaptadas a las condiciones del altiplano.
+            </p>
+          </article>
+
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm"
+          >
+            <h3 class="font-display text-2xl font-bold text-tierra-300">
+              Espiritualidad
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Espacios y símbolos asociados con ceremonias andinas.
+            </p>
+          </article>
+
+          <article
+            class="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm"
+          >
+            <h3 class="font-display text-2xl font-bold text-tierra-300">
+              Identidad
+            </h3>
+
+            <p class="mt-3 leading-7 text-piedra-200">
+              Un referente histórico y cultural de Bolivia.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-piedra-900 text-white">
+    <div
+      class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8"
+    >
+      <div class="lg:col-span-2">
+        <a
+          href="../lapaz-tihuanacu-bolivia.html"
+          class="inline-flex items-center gap-3"
+        >
+          <span
+            class="flex h-11 w-11 items-center justify-center rounded-full bg-tierra-700 font-display text-lg font-bold"
+          >
+            T
+          </span>
+
+          <span class="font-display text-xl font-bold">
+            Tihuanacu
+          </span>
+        </a>
+
+        <p class="mt-5 max-w-lg leading-7 text-piedra-300">
+          Una plataforma dedicada a difundir la historia, cultura y patrimonio
+          turístico de Tihuanacu.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-bold">
+          Navegación
+        </h2>
+
+        <ul class="mt-5 space-y-3 text-piedra-300">
+          <li>
+            <a
+              href="../lapaz-tihuanacu-bolivia.html"
+              class="transition hover:text-tierra-300"
+            >
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="atractivos.html"
+              class="transition hover:text-tierra-300"
+            >
+              Atractivos
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="galeria.html"
+              class="transition hover:text-tierra-300"
+            >
+              Galería
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-bold">
+          Información
+        </h2>
+
+        <ul class="mt-5 space-y-3 text-piedra-300">
+          <li>
+            <a
+              href="visita.html"
+              class="transition hover:text-tierra-300"
+            >
+              Planificar visita
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="contacto.html"
+              class="transition hover:text-tierra-300"
+            >
+              Contacto
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://commons.wikimedia.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition hover:text-tierra-300"
+            >
+              Créditos fotográficos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-center text-sm text-piedra-400 sm:px-6 md:flex-row md:items-center md:justify-between md:text-left lg:px-8"
+      >
+        <p>
+          © <span id="current-year"></span> Turismo Tihuanacu.
+        </p>
+
+        <p>
+          Fotografías proporcionadas mediante Wikimedia Commons.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón para volver arriba -->
+  <button
+    id="scroll-top-button"
+    type="button"
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-tierra-700 text-white shadow-xl transition hover:-translate-y-1 hover:bg-tierra-800 focus:outline-none focus:ring-4 focus:ring-tierra-200"
+    aria-label="Volver al inicio"
+  >
+    <svg
+      class="h-6 w-6"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m5 15 7-7 7 7"
+      />
+    </svg>
+  </button>
+
+  <script>
+    "use strict";
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuOpenIcon = document.getElementById("menu-open-icon");
+    const menuCloseIcon = document.getElementById("menu-close-icon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+    const currentYear = document.getElementById("current-year");
+    const scrollTopButton = document.getElementById("scroll-top-button");
+
+    function setMobileMenuState(isOpen) {
+      mobileMenu.classList.toggle("hidden", !isOpen);
+      menuOpenIcon.classList.toggle("hidden", isOpen);
+      menuCloseIcon.classList.toggle("hidden", !isOpen);
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Cerrar menú" : "Abrir menú"
+      );
+    }
+
+    function updateScrollButton() {
+      const shouldShowButton = window.scrollY > 500;
+
+      scrollTopButton.classList.toggle("hidden", !shouldShowButton);
+      scrollTopButton.classList.toggle("flex", shouldShowButton);
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      setMobileMenuState(!isOpen);
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        setMobileMenuState(false);
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuState(false);
+      }
+    });
+
+    window.addEventListener("scroll", updateScrollButton);
+
+    scrollTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    currentYear.textContent = String(new Date().getFullYear());
+    updateScrollButton();
+  </script>
+</body>
+</html>

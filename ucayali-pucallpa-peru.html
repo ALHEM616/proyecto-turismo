@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Ucayali - Pucallpa</title>
+    <!-- Tailwind CSS CDN Estable (v3) -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-amber-50/30 text-stone-800 font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-emerald-700 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold flex items-center gap-2 tracking-wide">
+                <i class="fa-solid fa-tree text-amber-400"></i> UcayaliExplora
+            </a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#inicio" class="hover:text-amber-300 transition-colors">Inicio</a>
+                <a href="#destinos" class="hover:text-amber-300 transition-colors">Destinos</a>
+                <a href="#contacto" class="hover:text-amber-300 transition-colors">Contacto</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden bg-emerald-800 px-4 py-3 space-y-2">
+            <a href="#inicio" class="block hover:text-amber-300 py-1">Inicio</a>
+            <a href="#destinos" class="block hover:text-amber-300 py-1">Destinos</a>
+            <a href="#contacto" class="block hover:text-amber-300 py-1">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Héroe / Inicio -->
+    <header id="inicio" class="relative bg-stone-900 text-white h-[65vh] flex items-center justify-center text-center px-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://picsum.photos');">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 text-amber-400 uppercase tracking-tight">Descubre Pucallpa</h1>
+            <p class="text-lg md:text-xl mb-8 text-stone-200 font-light">Explora la magia de la Amazonía peruana, sus lagunas místicas y su cultura viva.</p>
+            <a href="#destinos" class="bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg inline-block transform hover:-translate-y-0.5">
+                Ver Atractivos <i class="fa-solid fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección de Destinos -->
+    <main id="destinos" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-emerald-800 mb-2">Sitios Turísticos Imperdibles</h2>
+            <p class="text-stone-600">Los mejores lugares que debes visitar en tu viaje a Ucayali</p>
+        </div>
+
+        <!-- Contenedor de Tarjetas (Se llena con JS) -->
+        <div id="destinos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Las tarjetas se generan dinámicamente aquí -->
+        </div>
+    </main>
+
+    <!-- Contacto / Footer -->
+    <footer id="contacto" class="bg-stone-900 text-stone-400 py-12 px-4 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">UcayaliExplora</h3>
+                <p class="text-sm leading-relaxed">Promocionando el turismo sostenible y la belleza natural de la región Ucayali, Pucallpa - Perú.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Enlaces Rápidos</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#inicio" class="hover:text-amber-400">Inicio</a></li>
+                    <li><a href="#destinos" class="hover:text-amber-400">Destinos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Contacto</h3>
+                <p class="text-sm flex items-center gap-2 mb-2"><i class="fa-solid fa-envelope text-amber-400"></i> info@pucallpatravel.com</p>
+                <p class="text-sm flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-400"></i> Plaza de Armas de Pucallpa</p>
+            </div>
+        </div>
+        <div class="text-center text-xs border-t border-stone-800 pt-6">
+            &copy; 2026 UcayaliExplora. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Lógica de JavaScript -->
+    <script>
+        // 1. Datos reales con imágenes de respaldo que no fallan
+        const lugaresTuristicos = [
+            {
+                nombre: "Laguna de Yarinacocha",
+                descripcion: "Uno de los lagos más grandes de la Amazonía. Ideal para paseos en peque-peque, avistamiento de delfines rosados y pesca artesanal.",
+                imagen: "https://picsum.photos", 
+                icono: "fa-ship"
+            },
+            {
+                nombre: "Boquerón del Padre Abad",
+                descripcion: "Un impresionante cañón con imponentes paredes de roca de donde caen hermosas cascadas, como el Velo de la Novia.",
+                imagen: "https://picsum.photos",
+                icono: "fa-water"
+            },
+            {
+                nombre: "Comunidad Nativa San Francisco",
+                descripcion: "El asentamiento más antiguo de la etnia Shipibo-Conibo. Conoce de cerca sus costumbres, textilería, hermosa cerámica y su medicina tradicional.",
+                imagen: "https://picsum.photos",
+                icono: "fa-people-group"
+            }
+        ];
+
+        // 2. Renderizar tarjetas con JavaScript
+        const container = document.getElementById('destinos-container');
+
+        lugaresTuristicos.forEach(lugar => {
+            const card = document.createElement('div');
+            card.className = "bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col border border-stone-100";
+            
+            card.innerHTML = `
+                <div class="h-48 bg-stone-200 relative">
+                    <img src="${lugar.imagen}" alt="${lugar.nombre}" class="w-full h-full object-cover">
+                    <span class="absolute top-3 right-3 bg-emerald-700 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                        <i class="fa-solid ${lugar.icono}"></i>
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl text-stone-900 mb-2">${lugar.nombre}</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">${lugar.descripcion}</p>
+                    </div>
+                    <button onclick="alert('¡Pronto más información sobre ${lugar.nombre}!')" class="mt-5 text-emerald-700 font-bold text-sm flex items-center gap-1 hover:text-emerald-900 transition-colors w-fit">
+                        Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+
+        // 3. Menú móvil interactivo
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
