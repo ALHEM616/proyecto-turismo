@@ -1,4 +1,5 @@
 # Proyecto turistico
+
 ## Integrantes:
 
 ``
@@ -13,6 +14,7 @@
 - Josimar Velasquez Merida
 - Alvaro Cortez
 - Jerson Tasilla Culqui
+- Aldry Heredia Marquez
 - Bryan MG
 - Josias
 - juan salvatierra
