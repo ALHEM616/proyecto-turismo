@@ -1,11 +1,478 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=Stgo-puntacana-RepDom.html">
-    <title>Redirigiendo a Punta Cana...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo LATAM | Explora Latinoamerica</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <p>Si no eres redirigido automáticamente, <a href="Stgo-puntacana-RepDom.html">haz clic aquí para ir a Punta Cana</a>.</p>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- Hero Background Image with Overlay -->
+    <div class="fixed inset-0 -z-10 bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80')] bg-cover bg-center brightness-[0.25]"></div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-lg bg-slate-950/60 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="p-2.5 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/30 group-hover:scale-105 transition-transform">
+                    <i data-lucide="compass" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-white via-slate-200 to-teal-400 bg-clip-text text-transparent">Turismo LATAM</span>
+                    <span class="block text-xs text-slate-400">Portal Destinos Latinoamérica</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#destinos" class="hover:text-teal-400 transition-colors">Todos los Destinos</a>
+                <a href="#paises" class="hover:text-teal-400 transition-colors">Países</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-300 border border-teal-500/20 backdrop-blur-md">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                19 Destinos Increíbles
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                Descubre las maravillas de <span class="bg-gradient-to-r from-teal-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">Latinoamérica</span>
+            </h1>
+            <p class="text-lg text-slate-300">
+                Explora paisajes naturales, monumentos históricos y la riqueza cultural de la región a través de nuestras guías turísticas.
+            </p>
+
+            <!-- Search Bar Filter -->
+            <div class="pt-4 max-w-xl mx-auto">
+                <div class="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-2 shadow-2xl flex items-center">
+                    <i data-lucide="search" class="w-5 h-5 text-slate-400 ml-3"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar por país, ciudad o atractivo..." class="w-full bg-transparent px-4 py-2.5 text-white placeholder-slate-400 focus:outline-none text-sm sm:text-base">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Grid Section -->
+    <main id="destinos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Catálogo de Destinos</h2>
+                <p class="text-sm text-slate-400 mt-1">Selecciona cualquier lugar para explorar la información detallada</p>
+            </div>
+            
+            <!-- Quick Country Filters -->
+            <div id="paises" class="flex flex-wrap gap-2 text-xs font-medium">
+                <button onclick="filterCountry('all')" class="filter-btn active px-3 py-1.5 rounded-lg bg-teal-500 text-slate-950 font-semibold transition-all">Todos</button>
+                <button onclick="filterCountry('bolivia')" class="filter-btn px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-all">Bolivia</button>
+                <button onclick="filterCountry('peru')" class="filter-btn px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-all">Perú</button>
+                <button onclick="filterCountry('repdom')" class="filter-btn px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-all">Rep. Dominicana</button>
+                <button onclick="filterCountry('otros')" class="filter-btn px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-all">Otros</button>
+            </div>
+        </div>
+
+        <div id="cardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- Bolivia -->
+            <a href="potosi-salaruyuni-bolivia.html" data-country="bolivia" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1533050487297-09b450131914?auto=format&fit=crop&q=80" alt="Salar de Uyuni" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-teal-300 border border-white/10">Bolivia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Salar de Uyuni</h3>
+                        <p class="text-xs text-slate-400 mt-1">Potosí</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="la-paz-copacabana-bolivia.html" data-country="bolivia" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&q=80" alt="Copacabana" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-teal-300 border border-white/10">Bolivia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Copacabana & Lago Titicaca</h3>
+                        <p class="text-xs text-slate-400 mt-1">La Paz</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="lapaz-tarija-bolivia.html" data-country="bolivia" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80" alt="Tarija" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-teal-300 border border-white/10">Bolivia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Ruta La Paz - Tarija</h3>
+                        <p class="text-xs text-slate-400 mt-1">La Paz / Tarija</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="cbba-concordia-bolivia.html" data-country="bolivia" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80" alt="Cristo de la Concordia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-teal-300 border border-white/10">Bolivia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Cristo de la Concordia</h3>
+                        <p class="text-xs text-slate-400 mt-1">Cochabamba</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="cochabamba-pairumani-bolivia.html" data-country="bolivia" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80" alt="Pairumani" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-teal-300 border border-white/10">Bolivia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Parque Ecológico Pairumani</h3>
+                        <p class="text-xs text-slate-400 mt-1">Cochabamba</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="scz-cotoca-bolivia.html" data-country="bolivia" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80" alt="Cotoca" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-teal-300 border border-white/10">Bolivia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Santuario de Cotoca</h3>
+                        <p class="text-xs text-slate-400 mt-1">Santa Cruz</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Perú -->
+            <a href="cajamarca-bañosInca-Peru.html" data-country="peru" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&q=80" alt="Baños del Inca" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-emerald-300 border border-white/10">Perú</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Baños del Inca</h3>
+                        <p class="text-xs text-slate-400 mt-1">Cajamarca</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ica-lahuacachina-peru.html" data-country="peru" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&q=80" alt="Huacachina" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-emerald-300 border border-white/10">Perú</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Oasis de la Huacachina</h3>
+                        <p class="text-xs text-slate-400 mt-1">Ica</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="lima-centrolima-peru.html" data-country="peru" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&q=80" alt="Centro de Lima" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-emerald-300 border border-white/10">Perú</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Centro Histórico</h3>
+                        <p class="text-xs text-slate-400 mt-1">Lima</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="puno-isla-uros-peru.html" data-country="peru" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&q=80" alt="Islas de los Uros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-emerald-300 border border-white/10">Perú</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Islas Flotantes de los Uros</h3>
+                        <p class="text-xs text-slate-400 mt-1">Puno</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ucayali-pucallpa-peru.html" data-country="peru" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80" alt="Pucallpa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-emerald-300 border border-white/10">Perú</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Pucallpa y la Amazonía</h3>
+                        <p class="text-xs text-slate-400 mt-1">Ucayali</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- República Dominicana -->
+            <a href="Santo Domingo Este-Megacentro-Republica Dominicana.html" data-country="repdom" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80" alt="Santo Domingo Este" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-cyan-300 border border-white/10">Rep. Dominicana</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Santo Domingo Este</h3>
+                        <p class="text-xs text-slate-400 mt-1">Megacentro</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="sd-distrito-zona-colonial.html" data-country="repdom" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&q=80" alt="Zona Colonial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-cyan-300 border border-white/10">Rep. Dominicana</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Zona Colonial</h3>
+                        <p class="text-xs text-slate-400 mt-1">Santo Domingo</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Stgo-puntacana-RepDom.html" data-country="repdom" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80" alt="Punta Cana" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-cyan-300 border border-white/10">Rep. Dominicana</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Punta Cana</h3>
+                        <p class="text-xs text-slate-400 mt-1">Santiago / Punta Cana</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Otros Países -->
+            <a href="bahia-ballena-costa-rica.html" data-country="otros" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80" alt="Bahía Ballena" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-sky-300 border border-white/10">Costa Rica</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Parque Marino Bahía Ballena</h3>
+                        <p class="text-xs text-slate-400 mt-1">Puntarenas</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="guatemala-lagoatitlan.html" data-country="otros" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80" alt="Lago Atitlán" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-sky-300 border border-white/10">Guatemala</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Lago Atitlán</h3>
+                        <p class="text-xs text-slate-400 mt-1">Sololá</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ipiales-laslajas-colombia.html" data-country="otros" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&q=80" alt="Santuario de Las Lajas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-sky-300 border border-white/10">Colombia</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Santuario de Las Lajas</h3>
+                        <p class="text-xs text-slate-400 mt-1">Ipiales, Nariño</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Managua-Nicaragua.html" data-country="otros" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80" alt="Managua" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-sky-300 border border-white/10">Nicaragua</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Managua</h3>
+                        <p class="text-xs text-slate-400 mt-1">Distrito Capital</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Puebla-Cholula-México.html" data-country="otros" class="destination-card group relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&q=80" alt="Cholula" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-medium bg-slate-950/70 backdrop-blur-md text-sky-300 border border-white/10">México</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">Gran Pirámide de Cholula</h3>
+                        <p class="text-xs text-slate-400 mt-1">Puebla</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-teal-400 font-medium">
+                        <span>Ver más información</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-white/10 bg-slate-950/80 backdrop-blur-md py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-slate-400">© 2026 Proyecto Turismo LATAM. Todos los derechos reservados.</p>
+            <div class="flex items-center gap-4 text-xs text-slate-400">
+                <span>Diseñado con Tailwind CSS</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        lucide.createIcons();
+
+        // Search Filter Logic
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.destination-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+
+        // Country Category Filter Logic
+        function filterCountry(category) {
+            // Toggle active state on buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-teal-500', 'text-slate-950', 'font-semibold');
+                btn.classList.add('bg-white/5', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-white/5', 'text-slate-300');
+            event.target.classList.add('bg-teal-500', 'text-slate-950', 'font-semibold');
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.country === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
