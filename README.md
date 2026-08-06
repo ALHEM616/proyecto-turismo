@@ -1,6 +1,5 @@
 # Proyecto turistico
 
-
 ## Integrantes:
 
 ``
@@ -12,3 +11,4 @@
 - Ricardo Ventura
 - Josimar Velasquez Merida
 - Jerson Tasilla Culqui
+- Bryan MG
