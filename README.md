@@ -6,6 +6,7 @@
 	INTEGRANTES
 ``
 - Moises Mojica
+- Jimmy Alvarez
 - Nilo Centellas
 - César Alca
 - Ricardo Ventura
