@@ -1,8 +1,4 @@
 # Proyecto turistico
-
-INTEGRANTES
-## Integrantes:
-
 ``
 	INTEGRANTES
 ``
@@ -18,5 +14,6 @@ INTEGRANTES
 - Aldry Heredia Marquez
 - Bryan MG
 - Josias
+- Aramis Luciano
 - juan salvatierra
 - Joel Perez Damian
