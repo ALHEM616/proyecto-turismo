@@ -1,5 +1,6 @@
 # Proyecto turistico
 
+INTEGRANTES
 ## Integrantes:
 
 ``
@@ -18,3 +19,4 @@
 - Bryan MG
 - Josias
 - juan salvatierra
+- Joel Perez Damian
