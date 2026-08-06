@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Puebla, Cholula y Africam Safari</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            600: '#c55831',
+                            700: '#a3421f',
+                            800: '#87381d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-extrabold text-brand-700 tracking-tight">
+                Puebla<span class="text-gray-900">Magia</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#cholula" class="hover:text-brand-600 transition">Pirámide de Cholula</a>
+                <a href="#puebla" class="hover:text-brand-600 transition">Ciudad de Puebla</a>
+                <a href="#africam" class="hover:text-brand-600 transition">Africam Safari</a>
+            </nav>
+            <a href="#contacto" class="bg-brand-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:bg-brand-700 transition transform hover:-translate-y-0.5">
+                Planear Viaje
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center text-center px-4" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1588668214407-6ea9a6d5c272?auto=format&fit=crop&q=80&w=1920');">
+        <div class="max-w-4xl mx-auto text-white mt-16">
+            <span class="bg-brand-600 uppercase tracking-widest text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">Destino Único</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Vive la Magia de Puebla, Cholula y la Aventura
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Historia milenaria, arquitectura colonial barroca y la emoción de la vida salvaje te esperan en un solo viaje inolvidable.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#cholula" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1">
+                    Explorar Destinos
+                </a>
+                <a href="#contacto" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold px-8 py-4 rounded-xl transition">
+                    Obtener Guía Gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Principal 1: Pirámide de Cholula -->
+    <section id="cholula" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-brand-600/10 rounded-3xl transform -rotate-2"></div>
+                <img src="https://images.unsplash.com/photo-1512818017586-7a83d7890f5c?auto=format&fit=crop&q=80&w=1000" alt="Pirámide de Cholula" class="relative rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+            </div>
+            <div>
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Historia y Misterio</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-6">
+                    La Gran Pirámide de Cholula y Tlachihualtepetl
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Descubre el basamento piramidal más grande del mundo en volumen. Sobre ella se alza la icónica Iglesia de Nuestra Señora de los Remedios, regalándote una vista imponente de los volcanes Popocatépetl e Iztaccíhuatl. Recorre sus túneles subterráneos y maravíllate con la fusión de culturas prehispánica y colonial.
+                </p>
+                <ul class="space-y-3 mb-8 text-gray-700 font-medium">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Túneles arqueológicos abiertos al público
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Santuario de la Virgen de los Remedios en la cima
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Ambiente de Pueblo Mágico lleno de tradición y 365 iglesias
+                    </li>
+                </ul>
+                <a href="#contacto" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-600 transition">Quiero visitar Cholula</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Principal 2: Ciudad de Puebla -->
+    <section id="puebla" class="bg-gray-100 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Patrimonio de la Humanidad</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-6">
+                        Heroica Ciudad de Puebla de Zaragoza
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Piérdete entre sus calles flanqueadas por casonas recubiertas de azulejos de talavera. Disfruta de una de las gastronomías más ricas de México probando un auténtico Mole Poblano o unas Cemitas. Visita la magnífica Catedral, la histórica Capilla del Rosario y el famoso Barrio del Artista.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-gray-700 font-medium">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Impresionante arquitectura barroca y colonial
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Gastronomía de clase mundial (Mole Poblano, Chiles en Nogada)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Mercados tradicionales y la famosa Biblioteca Palafoxiana
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="inline-block bg-brand-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-700 transition">Conocer Paquetes Turísticos</a>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                    <div class="absolute -inset-4 bg-brand-600/10 rounded-3xl transform rotate-2"></div>
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=1000" alt="Ciudad de Puebla" class="relative rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Principal 3: Africam Safari -->
+    <section id="africam" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-brand-600/10 rounded-3xl transform -rotate-2"></div>
+                <img src="https://images.unsplash.com/photo-1534188353332-6cdb7f883f4e?auto=format&fit=crop&q=80&w=1000" alt="Africam Safari" class="relative rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+            </div>
+            <div>
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Aventura y Naturaleza</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-6">
+                    Africam Safari: Vive la Libertad Animal
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Siente la emoción de estar cerca de la fauna salvaje en un entorno semi-libre donde los animales deambulan libremente. Recorre las distintas zonas en tu propio vehículo o en los autobuses del parque y convive cara a cara con leones, jirafas, rinocerontes y elefantes.
+                </p>
+                <ul class="space-y-3 mb-8 text-gray-700 font-medium">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Recorrido estilo safari en libertad
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Experiencias nocturnas y recorridos extremos
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Ideal para toda la familia y amantes de la conservación
+                    </li>
+                </ul>
+                <a href="#contacto" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-600 transition">Planear Visita a Africam</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto / Call to Action -->
+    <section id="contacto" class="bg-brand-700 py-20 text-white text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">¿Listo para tu próxima gran aventura en Puebla?</h2>
+            <p class="text-brand-100 mb-8 text-lg">Déjanos tus datos y recibe itinerarios recomendados, tips de viaje y descuentos exclusivos para los mejores hoteles y atracciones.</p>
+            <form class="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('¡Gracias por registrarte! Pronto nos pondremos en contacto contigo.');">
+                <input type="email" placeholder="Ingresa tu correo electrónico" required class="px-5 py-3.5 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white flex-grow shadow-md">
+                <button type="submit" class="bg-gray-900 text-white font-bold px-8 py-3.5 rounded-xl hover:bg-gray-800 transition shadow-md">
+                    ¡Quiero mi Guía!
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-white font-bold text-lg mb-2">Puebla, Cholula y Africam Safari</p>
+            <p class="mb-6">El destino perfecto que combina cultura, historia y naturaleza en México.</p>
+            <p>&copy; 2026 Promoción Turística de Puebla. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
